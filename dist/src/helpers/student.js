@@ -8,21 +8,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.registerStudent = void 0;
-const httpstatus_1 = require("../utils/httpstatus");
-const argon2_1 = require("../utils/argon2");
-const student_1 = require("../helpers/student");
-const registerStudent = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        const data = req.body;
-        data.password = yield (0, argon2_1.hashPassword)(data.password);
-        const student = yield (0, student_1.addStudent)(data);
-        delete data.password;
-        res.status(httpstatus_1.httpstatus.OK).json({ message: "Student Registered Successfully", student });
-    }
-    catch (error) {
-        console.log(error);
-    }
+exports.addStudent = void 0;
+const prismaUtil_1 = __importDefault(require("../utils/prismaUtil"));
+const addStudent = (data) => __awaiter(void 0, void 0, void 0, function* () {
+    const student = yield prismaUtil_1.default.student.create({
+        data
+    });
+    return student;
 });
-exports.registerStudent = registerStudent;
+exports.addStudent = addStudent;
