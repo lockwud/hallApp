@@ -81,13 +81,15 @@ export const updateAdmin = async (req: Request, res: Response, next: NextFunctio
         next(new CustomError(500, error.toString()))
     }
 }
+//  can nestjs be used for microservices?
 
 export const getSingleAdmin = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { id } = req.params
         const admin = await loadSingleAdmin(id)
+        const { password, ...adminWithoutPassword } = admin;
         res.status(200).json({
-            admin
+            adminWithoutPassword
         })
     } catch (error: any) {
         logger.error(error)

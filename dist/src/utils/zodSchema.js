@@ -15,4 +15,3 @@ exports.studentSchema = zod_1.default.object({
     level: zod_1.default.number(),
     telephone: zod_1.default.string().length(10)
 });
-module.exports = exports.studentSchema;
