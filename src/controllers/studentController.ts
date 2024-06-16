@@ -1,14 +1,22 @@
 import { NextFunction, Request,Response } from "express"
 import {httpstatus} from "../utils/httpstatus"
-import prisma from "../utils/prismaUtil"
-import {verifyPassword , hashPassword} from "../utils/argon2"
 
-export const addstudent = async(req: Request, res: Response, next: NextFunction)=>{
+
+import argon2 from "argon2"
+
+
+import {
+    addStudent
+} from "../helpers/student"
+
+export const registerStudent = async(req: Request, res: Response, next: NextFunction)=>{
     try{
-        const data:any = req.body;
-        const student = await prisma.student.create({
-            data
-        })
+
+        const data:any = req.body
+        data.password = await argon2.hash(data.password)
+        const student = await addStudent(data)
+        delete data.password
+
         res.status(httpstatus.OK).json({message:"Student Registered Successfully", student})
 
     }catch(error){
