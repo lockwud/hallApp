@@ -2,7 +2,7 @@ import { NextFunction, Request,Response } from "express"
 import {httpstatus} from "../utils/httpstatus"
 
 
-import argon2 from "argon2"
+import { hashPassword,verifyPassword } from "../utils/argon2"
 
 
 import {
@@ -13,7 +13,7 @@ export const registerStudent = async(req: Request, res: Response, next: NextFunc
     try{
 
         const data:any = req.body
-        data.password = await argon2.hash(data.password)
+        data.password = await hashPassword(data.password)
         const student = await addStudent(data)
         delete data.password
 
