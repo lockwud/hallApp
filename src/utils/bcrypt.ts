@@ -1,12 +1,12 @@
-import bcrypt from 'bcrypt'
+import * as argon2 from "argon2";
 
-const saltRounds: number = 12;
+
 
 
 const hashPassword = async (password: string): Promise<string> => {
 
     try {
-        const hash: string = await bcrypt.hash(password, saltRounds);
+        const hash: string = await argon2.hash(password,);
         return hash;
     } catch (error) {
         console.error('Error hashing password: ', error);
@@ -15,9 +15,9 @@ const hashPassword = async (password: string): Promise<string> => {
 }
 
 
-const comparePassword = async (password: string, hash: string): Promise<boolean> => {
+const verifyPassword = async (password: string, hash: string): Promise<boolean> => {
     try {
-        const result: boolean = await bcrypt.compare(password, hash);
+        const result: boolean = await argon2.verify(hash, password);
         return result;
     } catch (error) {
         console.error('Error comparing password: ', error);
@@ -27,5 +27,5 @@ const comparePassword = async (password: string, hash: string): Promise<boolean>
 
 export default {
     hashPassword,
-    comparePassword
+    verifyPassword
 }
