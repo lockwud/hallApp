@@ -1,0 +1,90 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgres"
+  url       = env("DATABASE_URL")
+}
+
+/// the admin that assigns a room to the student  and overlooks the application
+model admin {
+  id        String   @id @default(uuid())
+  fullname  String
+  email     String   @unique
+  password  String
+  telephone String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model student {
+  studentId   String       @id @default(uuid())
+  profile     String
+  fullName    String
+  email       String?
+  password    String
+  gender      String
+  level       Int
+  telephone   String       @unique
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  department  String?
+  allocation  allocation?
+  hall        hall?        @relation(fields: [hallId], references: [id])
+  hallId      String?
+  roomRequest roomRequest?
+}
+
+model allocation {
+  id        String   @id @default(uuid())
+  student   student  @relation(fields: [studentId], references: [studentId])
+  studentId String   @unique
+  rooms     rooms?   @relation(fields: [roomsId], references: [id])
+  roomsId   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model rooms {
+  id         String       @id @default(uuid())
+  roomnumber Int          @unique
+  status     status
+  blockName  String
+  createdAt  DateTime     @default(now())
+  allocation allocation[]
+  hall       hall?        @relation(fields: [hallId], references: [id])
+  hallId     String?
+}
+
+model roomRequest {
+  id        String   @id @default(uuid())
+  student   student? @relation(fields: [StudentId], references: [studentId])
+  StudentId String?  @unique
+  status    options
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model hall {
+  id       String    @id @default(uuid())
+  name     String
+  location String
+  student  student[]
+  rooms    rooms[]
+}
+
+enum status {
+  Vacant
+  Occupied
+  Partially_Occupied
+}
+
+enum options {
+  Rejected
+  Approved
+  Pending
+}
