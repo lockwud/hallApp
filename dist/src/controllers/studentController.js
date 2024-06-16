@@ -15,9 +15,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.addstudent = void 0;
 const httpstatus_1 = require("../utils/httpstatus");
 const prismaUtil_1 = __importDefault(require("../utils/prismaUtil"));
+const argon2_1 = __importDefault(require("argon2"));
 const addstudent = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const data = req.body;
+        data.password = yield argon2_1.default.hash(data.password);
         const student = yield prismaUtil_1.default.student.create({
             data
         });
