@@ -11,5 +11,3 @@ export const studentSchema = zod.object({
     telephone: zod.string().length(10)
 })
 
-
-module.exports = studentSchema;
