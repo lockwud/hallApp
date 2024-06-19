@@ -100,6 +100,7 @@ const updateAdmin = (req, res, next) => __awaiter(void 0, void 0, void 0, functi
     }
 });
 exports.updateAdmin = updateAdmin;
+//  can nestjs be used for microservices?
 const getSingleAdmin = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { id } = req.params;

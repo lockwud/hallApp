@@ -1,6 +1,6 @@
 import zod from "zod"
 
-export const studentSchema = zod.object({
+export const Schema = zod.object({
     studentId: zod.string(), 
     profile: zod.string(),    
     fullName: zod.string(),
@@ -8,6 +8,7 @@ export const studentSchema = zod.object({
     password: zod.string().min(8),
     gender: zod.string(),
     level: zod.number(),    
-    telephone: zod.string().length(10)
+    telephone: zod.string().length(10),
+    error: zod.any()
 })
 

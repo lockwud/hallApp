@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.addStudent = void 0;
+exports.signIn = exports.deleteStudent = exports.updateStudent = exports.getStudentById = exports.getStudent = exports.addStudent = void 0;
 const prismaUtil_1 = __importDefault(require("../utils/prismaUtil"));
 const addStudent = (data) => __awaiter(void 0, void 0, void 0, function* () {
     const student = yield prismaUtil_1.default.student.create({
@@ -21,3 +21,43 @@ const addStudent = (data) => __awaiter(void 0, void 0, void 0, function* () {
     return student;
 });
 exports.addStudent = addStudent;
+const getStudent = () => __awaiter(void 0, void 0, void 0, function* () {
+    const student = yield prismaUtil_1.default.student.findMany();
+    return student;
+});
+exports.getStudent = getStudent;
+const getStudentById = (studentId) => __awaiter(void 0, void 0, void 0, function* () {
+    const student = yield prismaUtil_1.default.student.findUnique({
+        where: { studentId }
+    });
+    return student;
+});
+exports.getStudentById = getStudentById;
+const updateStudent = (studentId, data) => __awaiter(void 0, void 0, void 0, function* () {
+    const student = yield prismaUtil_1.default.student.update({
+        where: {
+            studentId
+        },
+        data
+    });
+    return student;
+});
+exports.updateStudent = updateStudent;
+const deleteStudent = (studentId) => __awaiter(void 0, void 0, void 0, function* () {
+    const student = yield prismaUtil_1.default.student.delete({
+        where: {
+            studentId
+        }
+    });
+    return student;
+});
+exports.deleteStudent = deleteStudent;
+const signIn = (telephone) => __awaiter(void 0, void 0, void 0, function* () {
+    const student = yield prismaUtil_1.default.student.findUnique({
+        where: {
+            telephone
+        }
+    });
+    return student;
+});
+exports.signIn = signIn;
