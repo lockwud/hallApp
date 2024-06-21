@@ -6,8 +6,8 @@ generator client {
 }
 
 datasource db {
-  provider  = "postgres"
-  url       = env("DATABASE_URL")
+  provider = "postgres"
+  url      = env("DATABASE_URL")
 }
 
 /// the admin that assigns a room to the student  and overlooks the application
@@ -25,7 +25,7 @@ model student {
   studentId   String       @id @default(uuid())
   profile     String
   fullName    String
-  email       String?     
+  email       String?
   password    String
   gender      String
   level       Int
@@ -70,11 +70,13 @@ model roomRequest {
 }
 
 model hall {
-  id       String    @id @default(uuid())
-  name     String
-  location String
-  student  student[]
-  rooms    rooms[]
+  id        String    @id @default(uuid())
+  name      String
+  location  String
+  student   student[]
+  rooms     rooms[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
 }
 
 enum status {
