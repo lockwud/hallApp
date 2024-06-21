@@ -22,13 +22,17 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.router = void 0;
 const express_1 = require("express");
 exports.router = (0, express_1.Router)();
 const student = __importStar(require("../../controllers/studentController"));
 const studentCheck_1 = require("../../middleware/studentCheck");
-exports.router.post("/signUp", studentCheck_1.checkAvailability, student.registerStudent);
+const multer_1 = __importDefault(require("../../middleware/multer"));
+exports.router.post("/signUp", studentCheck_1.checkAvailability, multer_1.default.single("profile"), student.registerStudent);
 exports.router.post("/login", student.login);
 exports.router.get("/list", student.getStudents);
 exports.router.get("/:id", student.getStudentsById);

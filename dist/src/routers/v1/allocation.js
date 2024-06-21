@@ -9,4 +9,4 @@ router.get('/all/analytics', allocation_controller_1.getAnalytics);
 router.get('/', allocation_controller_1.getAllAlacocation);
 router.patch('/:id', allocation_controller_1.updateAllocation);
 router.delete('/:id', allocation_controller_1.deleteAllocation);
-module.exports = router;
+exports.default = router;
