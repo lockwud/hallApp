@@ -15,18 +15,19 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteAllocation = exports.getAnalytics = exports.getAllAlacocation = exports.updateAllocation = exports.findAllocationById = exports.saveAllocation = void 0;
 const logger_1 = __importDefault(require("../utils/logger"));
 const CustomError_1 = __importDefault(require("../utils/CustomError"));
+const httpstatus_1 = require("../utils/httpstatus");
 const allocation_1 = require("../helpers/allocation");
 const saveAllocation = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const data = req.body;
         const allocation = yield (0, allocation_1.addAllocation)(data);
-        res.status(200).json({
+        res.status(httpstatus_1.httpstatus.CREATED).json({
             allocationDetails: allocation,
         });
     }
     catch (error) {
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.saveAllocation = saveAllocation;
@@ -34,13 +35,13 @@ const findAllocationById = (req, res, next) => __awaiter(void 0, void 0, void 0,
     try {
         const { id } = req.params;
         const allocation = yield (0, allocation_1.allocateById)(id);
-        res.status(200).json({
+        res.status(httpstatus_1.httpstatus.OK).json({
             allocationDetails: allocation,
         });
     }
     catch (error) {
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.findAllocationById = findAllocationById;
@@ -49,26 +50,26 @@ const updateAllocation = (req, res, next) => __awaiter(void 0, void 0, void 0, f
         const { id } = req.params;
         const data = req.body;
         const allocation = yield (0, allocation_1.editAllocation)(id, data);
-        res.status(200).json({
+        res.status(httpstatus_1.httpstatus.OK).json({
             allocation,
         });
     }
     catch (error) {
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.updateAllocation = updateAllocation;
 const getAllAlacocation = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const allocations = yield (0, allocation_1.loadAllocations)();
-        res.status(200).json({
+        res.status(httpstatus_1.httpstatus.OK).json({
             allocations,
         });
     }
     catch (error) {
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.getAllAlacocation = getAllAlacocation;
@@ -89,13 +90,13 @@ const deleteAllocation = (req, res, next) => __awaiter(void 0, void 0, void 0, f
     try {
         const { id } = req.params;
         const allocation = yield (0, allocation_1.removeAllocation)(id);
-        res.status(200).json({
+        res.status(httpstatus_1.httpstatus.OK).json({
             allocation,
         });
     }
     catch (error) {
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.deleteAllocation = deleteAllocation;

@@ -59,3 +59,6 @@ const getRequestById = (req, res, next) => __awaiter(void 0, void 0, void 0, fun
     }
 });
 exports.getRequestById = getRequestById;
+// export const updateRequest = async(req: Request, res: Response, next: NextFunction)=>{
+//     const {}
+// }

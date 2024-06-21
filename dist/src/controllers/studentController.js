@@ -33,6 +33,7 @@ const registerStudent = (req, res, next) => __awaiter(void 0, void 0, void 0, fu
     try {
         const data = req.body;
         data.password = yield (0, argon2_1.hashPassword)(data.password);
+        data.level = parseInt(data.level);
         const student = yield (0, student_1.addStudent)(data);
         if (!student) {
             throw new CustomError_1.default(500, "An Error Occured");

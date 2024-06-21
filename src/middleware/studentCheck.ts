@@ -6,7 +6,9 @@ import { httpstatus } from "../utils/httpstatus"
 
 export const checkAvailability = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const { telephone }: { telephone: string } = req.body;
+        
+        const { telephone }: { telephone: string } = req.body
+        
 
         const student = await prisma.student.findUnique({
             where: {
