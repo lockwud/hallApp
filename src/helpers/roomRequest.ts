@@ -25,10 +25,10 @@ export const loadSingleRequest = async(id: string)=>{
     return request
 };
 
-export const editRequest = async(id: string, data: any)=>{
+export const editRequest = async(StudentId: string, data: any)=>{
     const request = await prisma.roomRequest.update({
         where:{
-            id
+            StudentId
         },
         data
     })

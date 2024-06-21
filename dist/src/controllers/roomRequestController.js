@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getRequestById = exports.getRequests = exports.addRequest = void 0;
+exports.removeRequest = exports.updateRequest = exports.getRequestById = exports.getRequests = exports.addRequest = void 0;
 const httpstatus_1 = require("../utils/httpstatus");
 const CustomError_1 = __importDefault(require("../utils/CustomError"));
 const logger_1 = __importDefault(require("../utils/logger"));
@@ -46,8 +46,8 @@ const getRequests = (req, res, next) => __awaiter(void 0, void 0, void 0, functi
 exports.getRequests = getRequests;
 const getRequestById = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { studentId } = req.params;
-        const request = yield (0, roomRequest_1.loadSingleRequest)(studentId);
+        const { StudentId } = req.params;
+        const request = yield (0, roomRequest_1.loadSingleRequest)(StudentId);
         res.status(httpstatus_1.httpstatus.OK).json({
             requestDetails: request
         });
@@ -59,6 +59,40 @@ const getRequestById = (req, res, next) => __awaiter(void 0, void 0, void 0, fun
     }
 });
 exports.getRequestById = getRequestById;
+<<<<<<< HEAD
 // export const updateRequest = async(req: Request, res: Response, next: NextFunction)=>{
 //     const {}
 // }
+=======
+const updateRequest = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const { StudentId } = req.params;
+        const data = req.body;
+        const request = yield (0, roomRequest_1.editRequest)(StudentId, data);
+        res.status(httpstatus_1.httpstatus.OK).json({
+            requestUpdated: request
+        });
+    }
+    catch (error) {
+        console.log(error);
+        logger_1.default.error(error);
+        next(new CustomError_1.default(500, error.toString()));
+    }
+});
+exports.updateRequest = updateRequest;
+const removeRequest = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const { StudentId } = req.params;
+        const request = yield (0, roomRequest_1.deleteRequest)(StudentId);
+        res.status(httpstatus_1.httpstatus.OK).json({
+            requestDeleted: request
+        });
+    }
+    catch (error) {
+        console.log(error);
+        logger_1.default.error(error);
+        next(new CustomError_1.default(500, error.toString()));
+    }
+});
+exports.removeRequest = removeRequest;
+>>>>>>> main

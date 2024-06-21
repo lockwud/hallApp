@@ -39,10 +39,10 @@ const loadSingleRequest = (id) => __awaiter(void 0, void 0, void 0, function* ()
     return request;
 });
 exports.loadSingleRequest = loadSingleRequest;
-const editRequest = (id, data) => __awaiter(void 0, void 0, void 0, function* () {
+const editRequest = (StudentId, data) => __awaiter(void 0, void 0, void 0, function* () {
     const request = yield prismaUtil_1.default.roomRequest.update({
         where: {
-            id
+            StudentId
         },
         data
     });
