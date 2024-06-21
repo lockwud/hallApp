@@ -68,7 +68,11 @@ export const roomUpdate = async(req: Request, res: Response, next: NextFunction)
 
 export const deleteRoom = async(req: Request, res: Response, next: NextFunction)=>{
     try{
-
+         const {id} = req.params
+         const room = await removeRoom(id)
+         res.status(httpstatus.OK).json({
+            room
+         })
     }catch(error: any){
         console.log(error)
         logger.error(error)
