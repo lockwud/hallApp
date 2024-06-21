@@ -38,8 +38,8 @@ export const getRequests = async (req: Request, res: Response, next: NextFunctio
 
 export const getRequestById = async (req: Request, res: Response, next: NextFunction) => {
    try{
-    const {studentId} = req.params
-    const request = await loadSingleRequest(studentId)
+    const {StudentId} = req.params
+    const request = await loadSingleRequest(StudentId)
     res.status(httpstatus.OK).json({
         requestDetails: request
     });
@@ -53,5 +53,34 @@ export const getRequestById = async (req: Request, res: Response, next: NextFunc
 };
 
 export const updateRequest = async(req: Request, res: Response, next: NextFunction)=>{
-    const {}
+   try{
+    const {StudentId} = req.params
+    const data: any = req.body
+    const request = await editRequest(StudentId, data)
+    res.status(httpstatus.OK).json({
+        requestUpdated: request
+    });
+
+   }catch(error: any){
+    console.log(error)
+    logger.error(error)
+    next(new customError(500, error.toString()))
+   }
+    
 }
+
+export const removeRequest = async(req: Request, res: Response, next: NextFunction)=>{
+    try{
+        const {StudentId} = req.params
+        const request = await deleteRequest(StudentId)
+        res.status(httpstatus.OK).json({
+            requestDeleted: request
+        });
+
+}catch(error: any){
+    console.log(error)
+    logger.error(error)
+    next(new customError(500, error.toString()))
+}
+};
+
