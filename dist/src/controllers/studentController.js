@@ -8,6 +8,17 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -23,8 +34,14 @@ const registerStudent = (req, res, next) => __awaiter(void 0, void 0, void 0, fu
         const data = req.body;
         data.password = yield (0, argon2_1.hashPassword)(data.password);
         const student = yield (0, student_1.addStudent)(data);
-        delete data.password;
-        res.status(httpstatus_1.httpstatus.OK).json({ message: "Student Registered Successfully", student });
+        if (!student) {
+            throw new CustomError_1.default(500, "An Error Occured");
+        }
+        //   destructure  the password out of the student object 
+        const { password } = student, studentWithoutPassword = __rest(student, ["password"]);
+        // clear this comment
+        //  if you want you can put the studentwithoutpassword in the  student variable but you will have to change it to const
+        res.status(httpstatus_1.httpstatus.OK).json({ message: "Student Registered Successfully", studentWithoutPassword });
     }
     catch (error) {
         console.log(error);
