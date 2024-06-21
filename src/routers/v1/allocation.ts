@@ -16,4 +16,4 @@ router.patch('/:id', updateAllocation);
 
 router.delete('/:id', deleteAllocation);
 
-module.exports = router;
+export default router;

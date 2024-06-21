@@ -1,4 +1,5 @@
 import logger from "../utils/logger";
+import CustomError from "../utils/CustomError";
 import express, { Request, Response, NextFunction } from "express";
 import {
     addAllocation,
@@ -11,14 +12,14 @@ import {
 
 export const saveAllocation = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const data:any = req.body;
+        const data: any = req.body;
         const allocation = await addAllocation(data);
         res.status(200).json({
             allocationDetails: allocation,
         });
-    } catch (error) {
+    } catch (error: any) {
         logger.error(error);
-        next(error);
+        next(new CustomError(500, error.toString()))
     }
 };
 
@@ -29,9 +30,9 @@ export const findAllocationById = async (req: Request, res: Response, next: Next
         res.status(200).json({
             allocationDetails: allocation,
         });
-    } catch (error) {
+    } catch (error: any) {
         logger.error(error);
-        next(error);
+        next(new CustomError(500, error.toString()))
     }
 };
 
@@ -43,9 +44,9 @@ export const updateAllocation = async (req: Request, res: Response, next: NextFu
         res.status(200).json({
             allocation,
         });
-    } catch (error) {
+    } catch (error: any) {
         logger.error(error);
-        next(error);
+        next(new CustomError(500, error.toString()))
     }
 };
 
@@ -55,9 +56,9 @@ export const getAllAlacocation = async (req: Request, res: Response, next: NextF
         res.status(200).json({
             allocations,
         });
-    } catch (error) {
+    } catch (error: any) {
         logger.error(error);
-        next(error);
+        next(new CustomError(500, error.toString()))
     }
 };
 
@@ -67,9 +68,9 @@ export const getAnalytics = async (req: Request, res: Response, next: NextFuncti
         res.status(200).json({
             allocation,
         });
-    } catch (error) {
+    } catch (error: any) {
         logger.error(error);
-        next(error);
+        next(new CustomError(500, error.toString()))
     }
 };
 
@@ -80,8 +81,8 @@ export const deleteAllocation = async (req: Request, res: Response, next: NextFu
         res.status(200).json({
             allocation,
         });
-    } catch (error) {
+    } catch (error: any) {
         logger.error(error);
-        next(error);
+        next(new CustomError(500, error.toString()))
     }
 };
