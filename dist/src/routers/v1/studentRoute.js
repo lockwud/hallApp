@@ -32,7 +32,7 @@ exports.router = (0, express_1.Router)();
 const student = __importStar(require("../../controllers/studentController"));
 const studentCheck_1 = require("../../middleware/studentCheck");
 const multer_1 = __importDefault(require("../../middleware/multer"));
-exports.router.post("/signUp", studentCheck_1.checkAvailability, multer_1.default.single("profile"), student.registerStudent);
+exports.router.post("/signUp", multer_1.default.single("profile"), studentCheck_1.checkAvailability, student.registerStudent);
 exports.router.post("/login", student.login);
 exports.router.get("/list", student.getStudents);
 exports.router.get("/:id", student.getStudentsById);

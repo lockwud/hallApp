@@ -5,7 +5,7 @@ import * as student from "../../controllers/studentController"
 import { checkAvailability } from "../../middleware/studentCheck";
 import upload from "../../middleware/multer"
 
-router.post("/signUp", checkAvailability, upload.single("profile"),student.registerStudent);
+router.post("/signUp", upload.single("profile"), checkAvailability, student.registerStudent);
 router.post("/login", student.login)
 router.get("/list", student.getStudents)
 router.get("/:id", student.getStudentsById)

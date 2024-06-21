@@ -19,6 +19,7 @@ export const registerStudent = async (req: Request, res: Response, next: NextFun
 
         const data: any = req.body
         data.password = await hashPassword(data.password)
+        data.level = parseInt(data.level)
         const student = await addStudent(data)
         if (!student) {
             throw new customError(500, "An Error Occured")

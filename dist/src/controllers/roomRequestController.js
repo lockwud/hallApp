@@ -59,6 +59,11 @@ const getRequestById = (req, res, next) => __awaiter(void 0, void 0, void 0, fun
     }
 });
 exports.getRequestById = getRequestById;
+<<<<<<< HEAD
+// export const updateRequest = async(req: Request, res: Response, next: NextFunction)=>{
+//     const {}
+// }
+=======
 const updateRequest = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { StudentId } = req.params;
@@ -90,3 +95,4 @@ const removeRequest = (req, res, next) => __awaiter(void 0, void 0, void 0, func
     }
 });
 exports.removeRequest = removeRequest;
+>>>>>>> main

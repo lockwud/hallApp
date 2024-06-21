@@ -1,0 +1,217 @@
+2024-06-21T17:46:16.941Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.findUnique()` invocation in
+/home/sam/Documents/hallApp/dist/src/middleware/studentCheck.js:23:60
+
+  20 const checkAvailability = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+  21     try {
+  22         const { telephone } = req.body;
+→ 23         const student = yield prismaUtil_1.default.student.findUnique({
+               where: {
+                 telephone: undefined,
+             ?   studentId?: String,
+             ?   AND?: studentWhereInput | studentWhereInput[],
+             ?   OR?: studentWhereInput[],
+             ?   NOT?: studentWhereInput | studentWhereInput[],
+             ?   profile?: StringFilter | String,
+             ?   fullName?: StringFilter | String,
+             ?   email?: StringNullableFilter | String | Null,
+             ?   password?: StringFilter | String,
+             ?   gender?: StringFilter | String,
+             ?   level?: IntFilter | Int,
+             ?   createdAt?: DateTimeFilter | DateTime,
+             ?   updatedAt?: DateTimeFilter | DateTime,
+             ?   department?: StringNullableFilter | String | Null,
+             ?   hallId?: StringNullableFilter | String | Null,
+             ?   allocation?: AllocationNullableRelationFilter | allocationWhereInput | Null,
+             ?   hall?: HallNullableRelationFilter | hallWhereInput | Null,
+             ?   roomRequest?: RoomRequestNullableRelationFilter | roomRequestWhereInput | Null
+               }
+             })
+
+Argument `where` of type studentWhereUniqueInput needs at least one of `studentId` or `telephone` arguments. Available options are marked with ?.
+2024-06-21T17:46:32.520Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.findUnique()` invocation in
+/home/sam/Documents/hallApp/dist/src/middleware/studentCheck.js:23:60
+
+  20 const checkAvailability = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+  21     try {
+  22         const { telephone } = req.body;
+→ 23         const student = yield prismaUtil_1.default.student.findUnique({
+               where: {
+                 telephone: undefined,
+             ?   studentId?: String,
+             ?   AND?: studentWhereInput | studentWhereInput[],
+             ?   OR?: studentWhereInput[],
+             ?   NOT?: studentWhereInput | studentWhereInput[],
+             ?   profile?: StringFilter | String,
+             ?   fullName?: StringFilter | String,
+             ?   email?: StringNullableFilter | String | Null,
+             ?   password?: StringFilter | String,
+             ?   gender?: StringFilter | String,
+             ?   level?: IntFilter | Int,
+             ?   createdAt?: DateTimeFilter | DateTime,
+             ?   updatedAt?: DateTimeFilter | DateTime,
+             ?   department?: StringNullableFilter | String | Null,
+             ?   hallId?: StringNullableFilter | String | Null,
+             ?   allocation?: AllocationNullableRelationFilter | allocationWhereInput | Null,
+             ?   hall?: HallNullableRelationFilter | hallWhereInput | Null,
+             ?   roomRequest?: RoomRequestNullableRelationFilter | roomRequestWhereInput | Null
+               }
+             })
+
+Argument `where` of type studentWhereUniqueInput needs at least one of `studentId` or `telephone` arguments. Available options are marked with ?.
+2024-06-21T17:47:35.379Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.findUnique()` invocation in
+/home/sam/Documents/hallApp/dist/src/middleware/studentCheck.js:24:60
+
+  21 try {
+  22     console.log(req.body);
+  23     const { telephone } = req.body;
+→ 24     const student = yield prismaUtil_1.default.student.findUnique({
+           where: {
+             telephone: undefined,
+         ?   studentId?: String,
+         ?   AND?: studentWhereInput | studentWhereInput[],
+         ?   OR?: studentWhereInput[],
+         ?   NOT?: studentWhereInput | studentWhereInput[],
+         ?   profile?: StringFilter | String,
+         ?   fullName?: StringFilter | String,
+         ?   email?: StringNullableFilter | String | Null,
+         ?   password?: StringFilter | String,
+         ?   gender?: StringFilter | String,
+         ?   level?: IntFilter | Int,
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   department?: StringNullableFilter | String | Null,
+         ?   hallId?: StringNullableFilter | String | Null,
+         ?   allocation?: AllocationNullableRelationFilter | allocationWhereInput | Null,
+         ?   hall?: HallNullableRelationFilter | hallWhereInput | Null,
+         ?   roomRequest?: RoomRequestNullableRelationFilter | roomRequestWhereInput | Null
+           }
+         })
+
+Argument `where` of type studentWhereUniqueInput needs at least one of `studentId` or `telephone` arguments. Available options are marked with ?.
+2024-06-21T17:48:49.228Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.findUnique()` invocation in
+/home/sam/Documents/hallApp/dist/src/middleware/studentCheck.js:24:60
+
+  21 try {
+  22     console.log(req.body);
+  23     const { telephone } = req.body;
+→ 24     const student = yield prismaUtil_1.default.student.findUnique({
+           where: {
+             telephone: undefined,
+         ?   studentId?: String,
+         ?   AND?: studentWhereInput | studentWhereInput[],
+         ?   OR?: studentWhereInput[],
+         ?   NOT?: studentWhereInput | studentWhereInput[],
+         ?   profile?: StringFilter | String,
+         ?   fullName?: StringFilter | String,
+         ?   email?: StringNullableFilter | String | Null,
+         ?   password?: StringFilter | String,
+         ?   gender?: StringFilter | String,
+         ?   level?: IntFilter | Int,
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   department?: StringNullableFilter | String | Null,
+         ?   hallId?: StringNullableFilter | String | Null,
+         ?   allocation?: AllocationNullableRelationFilter | allocationWhereInput | Null,
+         ?   hall?: HallNullableRelationFilter | hallWhereInput | Null,
+         ?   roomRequest?: RoomRequestNullableRelationFilter | roomRequestWhereInput | Null
+           }
+         })
+
+Argument `where` of type studentWhereUniqueInput needs at least one of `studentId` or `telephone` arguments. Available options are marked with ?.
+2024-06-21T17:49:02.825Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.findUnique()` invocation in
+/home/sam/Documents/hallApp/dist/src/middleware/studentCheck.js:25:60
+
+  22 console.log(req.body);
+  23 const { telephone } = req.body;
+  24 console.log(telephone);
+→ 25 const student = yield prismaUtil_1.default.student.findUnique({
+       where: {
+         telephone: undefined,
+     ?   studentId?: String,
+     ?   AND?: studentWhereInput | studentWhereInput[],
+     ?   OR?: studentWhereInput[],
+     ?   NOT?: studentWhereInput | studentWhereInput[],
+     ?   profile?: StringFilter | String,
+     ?   fullName?: StringFilter | String,
+     ?   email?: StringNullableFilter | String | Null,
+     ?   password?: StringFilter | String,
+     ?   gender?: StringFilter | String,
+     ?   level?: IntFilter | Int,
+     ?   createdAt?: DateTimeFilter | DateTime,
+     ?   updatedAt?: DateTimeFilter | DateTime,
+     ?   department?: StringNullableFilter | String | Null,
+     ?   hallId?: StringNullableFilter | String | Null,
+     ?   allocation?: AllocationNullableRelationFilter | allocationWhereInput | Null,
+     ?   hall?: HallNullableRelationFilter | hallWhereInput | Null,
+     ?   roomRequest?: RoomRequestNullableRelationFilter | roomRequestWhereInput | Null
+       }
+     })
+
+Argument `where` of type studentWhereUniqueInput needs at least one of `studentId` or `telephone` arguments. Available options are marked with ?.
+2024-06-21T17:50:20.375Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.findUnique()` invocation in
+/home/sam/Documents/hallApp/dist/src/middleware/studentCheck.js:25:60
+
+  22 console.log(req.body);
+  23 const { telephone } = req.body;
+  24 console.log(telephone);
+→ 25 const student = yield prismaUtil_1.default.student.findUnique({
+       where: {
+         telephone: undefined,
+     ?   studentId?: String,
+     ?   AND?: studentWhereInput | studentWhereInput[],
+     ?   OR?: studentWhereInput[],
+     ?   NOT?: studentWhereInput | studentWhereInput[],
+     ?   profile?: StringFilter | String,
+     ?   fullName?: StringFilter | String,
+     ?   email?: StringNullableFilter | String | Null,
+     ?   password?: StringFilter | String,
+     ?   gender?: StringFilter | String,
+     ?   level?: IntFilter | Int,
+     ?   createdAt?: DateTimeFilter | DateTime,
+     ?   updatedAt?: DateTimeFilter | DateTime,
+     ?   department?: StringNullableFilter | String | Null,
+     ?   hallId?: StringNullableFilter | String | Null,
+     ?   allocation?: AllocationNullableRelationFilter | allocationWhereInput | Null,
+     ?   hall?: HallNullableRelationFilter | hallWhereInput | Null,
+     ?   roomRequest?: RoomRequestNullableRelationFilter | roomRequestWhereInput | Null
+       }
+     })
+
+Argument `where` of type studentWhereUniqueInput needs at least one of `studentId` or `telephone` arguments. Available options are marked with ?.
+2024-06-21T17:50:29.418Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.findUnique()` invocation in
+/home/sam/Documents/hallApp/dist/src/middleware/studentCheck.js:25:60
+
+  22 console.log(req.body);
+  23 const { telephone } = req.body;
+  24 console.log(telephone);
+→ 25 const student = yield prismaUtil_1.default.student.findUnique({
+       where: {
+         telephone: undefined,
+     ?   studentId?: String,
+     ?   AND?: studentWhereInput | studentWhereInput[],
+     ?   OR?: studentWhereInput[],
+     ?   NOT?: studentWhereInput | studentWhereInput[],
+     ?   profile?: StringFilter | String,
+     ?   fullName?: StringFilter | String,
+     ?   email?: StringNullableFilter | String | Null,
+     ?   password?: StringFilter | String,
+     ?   gender?: StringFilter | String,
+     ?   level?: IntFilter | Int,
+     ?   createdAt?: DateTimeFilter | DateTime,
+     ?   updatedAt?: DateTimeFilter | DateTime,
+     ?   department?: StringNullableFilter | String | Null,
+     ?   hallId?: StringNullableFilter | String | Null,
+     ?   allocation?: AllocationNullableRelationFilter | allocationWhereInput | Null,
+     ?   hall?: HallNullableRelationFilter | hallWhereInput | Null,
+     ?   roomRequest?: RoomRequestNullableRelationFilter | roomRequestWhereInput | Null
+       }
+     })
+
+Argument `where` of type studentWhereUniqueInput needs at least one of `studentId` or `telephone` arguments. Available options are marked with ?.
