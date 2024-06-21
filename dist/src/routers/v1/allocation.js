@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const allocation_controller_1 = require("../../controllers/allocation.controller");
+const router = (0, express_1.Router)();
+router.post('/', allocation_controller_1.saveAllocation);
+router.get('/:id', allocation_controller_1.findAllocationById);
+router.get('/all/analytics', allocation_controller_1.getAnalytics);
+router.get('/', allocation_controller_1.getAllAlacocation);
+router.patch('/:id', allocation_controller_1.updateAllocation);
+router.delete('/:id', allocation_controller_1.deleteAllocation);
+module.exports = router;
