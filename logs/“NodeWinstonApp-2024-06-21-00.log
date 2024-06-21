@@ -1,55 +1,158 @@
-2024-06-21T00:10:28.394Z [31merror[39m:	
-Invalid `prismaUtil_1.default.student.findUnique()` invocation in
-C:\Users\Python\Documents\project\hallApp\dist\src\middleware\studentCheck.js:23:60
+2024-06-21T00:48:37.056Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.create()` invocation in
+/home/sam/Documents/hallApp/dist/src/helpers/student.js:18:56
 
-  20 const checkAvailability = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
-  21     try {
-  22         const telephone = req.body;
-→ 23         const student = yield prismaUtil_1.default.student.findUnique(
-Can't reach database server at `localhost:5432`
+  15 exports.signIn = exports.deleteStudent = exports.updateStudent = exports.getStudentById = exports.getStudent = exports.addStudent = void 0;
+  16 const prismaUtil_1 = __importDefault(require("../utils/prismaUtil"));
+  17 const addStudent = (data) => __awaiter(void 0, void 0, void 0, function* () {
+→ 18     const student = yield prismaUtil_1.default.student.create(
+Unique constraint failed on the fields: (`telephone`)
+2024-06-21T00:49:38.576Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.create()` invocation in
+/home/sam/Documents/hallApp/dist/src/helpers/student.js:18:56
 
-Please make sure your database server is running at `localhost:5432`.
-2024-06-21T00:10:50.700Z [31merror[39m:	
+  15 exports.signIn = exports.deleteStudent = exports.updateStudent = exports.getStudentById = exports.getStudent = exports.addStudent = void 0;
+  16 const prismaUtil_1 = __importDefault(require("../utils/prismaUtil"));
+  17 const addStudent = (data) => __awaiter(void 0, void 0, void 0, function* () {
+→ 18     const student = yield prismaUtil_1.default.student.create(
+Unique constraint failed on the fields: (`telephone`)
+2024-06-21T00:49:43.080Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.create()` invocation in
+/home/sam/Documents/hallApp/dist/src/helpers/student.js:18:56
+
+  15 exports.signIn = exports.deleteStudent = exports.updateStudent = exports.getStudentById = exports.getStudent = exports.addStudent = void 0;
+  16 const prismaUtil_1 = __importDefault(require("../utils/prismaUtil"));
+  17 const addStudent = (data) => __awaiter(void 0, void 0, void 0, function* () {
+→ 18     const student = yield prismaUtil_1.default.student.create(
+Unique constraint failed on the fields: (`telephone`)
+2024-06-21T00:50:18.705Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.create()` invocation in
+/home/sam/Documents/hallApp/dist/src/helpers/student.js:18:56
+
+  15 exports.signIn = exports.deleteStudent = exports.updateStudent = exports.getStudentById = exports.getStudent = exports.addStudent = void 0;
+  16 const prismaUtil_1 = __importDefault(require("../utils/prismaUtil"));
+  17 const addStudent = (data) => __awaiter(void 0, void 0, void 0, function* () {
+→ 18     const student = yield prismaUtil_1.default.student.create(
+Unique constraint failed on the fields: (`telephone`)
+2024-06-21T00:51:09.761Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.create()` invocation in
+/home/sam/Documents/hallApp/dist/src/helpers/student.js:18:56
+
+  15 exports.signIn = exports.deleteStudent = exports.updateStudent = exports.getStudentById = exports.getStudent = exports.addStudent = void 0;
+  16 const prismaUtil_1 = __importDefault(require("../utils/prismaUtil"));
+  17 const addStudent = (data) => __awaiter(void 0, void 0, void 0, function* () {
+→ 18     const student = yield prismaUtil_1.default.student.create(
+Unique constraint failed on the fields: (`telephone`)
+2024-06-21T00:51:27.600Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.create()` invocation in
+/home/sam/Documents/hallApp/dist/src/helpers/student.js:18:56
+
+  15 exports.signIn = exports.deleteStudent = exports.updateStudent = exports.getStudentById = exports.getStudent = exports.addStudent = void 0;
+  16 const prismaUtil_1 = __importDefault(require("../utils/prismaUtil"));
+  17 const addStudent = (data) => __awaiter(void 0, void 0, void 0, function* () {
+→ 18     const student = yield prismaUtil_1.default.student.create(
+Unique constraint failed on the fields: (`telephone`)
+2024-06-21T00:52:24.629Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.create()` invocation in
+/home/sam/Documents/hallApp/dist/src/helpers/student.js:18:56
+
+  15 exports.signIn = exports.deleteStudent = exports.updateStudent = exports.getStudentById = exports.getStudent = exports.addStudent = void 0;
+  16 const prismaUtil_1 = __importDefault(require("../utils/prismaUtil"));
+  17 const addStudent = (data) => __awaiter(void 0, void 0, void 0, function* () {
+→ 18     const student = yield prismaUtil_1.default.student.create(
+Unique constraint failed on the fields: (`telephone`)
+2024-06-21T00:52:57.603Z [31merror[39m:	
 Invalid `prismaUtil_1.default.student.findUnique()` invocation in
-C:\Users\Python\Documents\project\hallApp\dist\src\middleware\studentCheck.js:23:60
+/home/sam/Documents/hallApp/dist/src/middleware/studentCheck.js:23:60
 
   20 const checkAvailability = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
   21     try {
   22         const telephone = req.body;
 → 23         const student = yield prismaUtil_1.default.student.findUnique({
                where: {
-                 telephone: {}
-                            ~~
+                 telephone: {
+                   profile: "918240927344",
+                   fullName: "Samuel",
+                   email: "Samuelmanueljnr@gmail.com",
+                   password: "Pass123@",
+                   gender: "male",
+                   level: 200,
+                   telephone: "!233105063939",
+                   department: "IT"
+                 }
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                }
              })
 
 Argument `telephone`: Invalid value provided. Expected String, provided Object.
-2024-06-21T00:13:46.651Z [31merror[39m:	
+2024-06-21T00:53:47.880Z [31merror[39m:	
 Invalid `prismaUtil_1.default.student.findUnique()` invocation in
-C:\Users\Python\Documents\project\hallApp\dist\src\middleware\studentCheck.js:23:60
+/home/sam/Documents/hallApp/dist/src/middleware/studentCheck.js:23:60
 
   20 const checkAvailability = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
   21     try {
   22         const telephone = req.body;
 → 23         const student = yield prismaUtil_1.default.student.findUnique({
                where: {
-                 telephone: {}
-                            ~~
+                 telephone: {
+                   profile: "918240927344",
+                   fullName: "Samuel",
+                   email: "Samuelmanueljnr@gmail.com",
+                   password: "Pass123@",
+                   gender: "male",
+                   level: 200,
+                   telephone: "!233105063939",
+                   department: "IT"
+                 }
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                }
              })
 
 Argument `telephone`: Invalid value provided. Expected String, provided Object.
-2024-06-21T00:15:08.042Z [31merror[39m:	
+2024-06-21T00:54:05.152Z [31merror[39m:	
 Invalid `prismaUtil_1.default.student.findUnique()` invocation in
-C:\Users\Python\Documents\project\hallApp\dist\src\middleware\studentCheck.js:23:60
+/home/sam/Documents/hallApp/dist/src/middleware/studentCheck.js:23:60
 
   20 const checkAvailability = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
   21     try {
   22         const telephone = req.body;
 → 23         const student = yield prismaUtil_1.default.student.findUnique({
                where: {
-                 telephone: {}
-                            ~~
+                 telephone: {
+                   profile: "918240927344",
+                   fullName: "Samuel",
+                   email: "Samuelmanueljnr@gmail.com",
+                   password: "Pass123@",
+                   gender: "male",
+                   level: 200,
+                   telephone: "!233105063939",
+                   department: "IT"
+                 }
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+               }
+             })
+
+Argument `telephone`: Invalid value provided. Expected String, provided Object.
+2024-06-21T00:54:06.693Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.findUnique()` invocation in
+/home/sam/Documents/hallApp/dist/src/middleware/studentCheck.js:23:60
+
+  20 const checkAvailability = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+  21     try {
+  22         const telephone = req.body;
+→ 23         const student = yield prismaUtil_1.default.student.findUnique({
+               where: {
+                 telephone: {
+                   profile: "918240927344",
+                   fullName: "Samuel",
+                   email: "Samuelmanueljnr@gmail.com",
+                   password: "Pass123@",
+                   gender: "male",
+                   level: 200,
+                   telephone: "!233105063939",
+                   department: "IT"
+                 }
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                }
              })
 

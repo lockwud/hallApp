@@ -1,8 +1,8 @@
-import {Router} from "express"
+import { Router } from "express"
 export const router: Router = Router();
 
 import * as student from "../../controllers/studentController"
-import {checkAvailability} from "../../middleware/studentCheck"
+import { checkAvailability } from "../../middleware/studentCheck";
 
 router.post("/signUp", checkAvailability, student.registerStudent);
 router.post("/login", student.login)

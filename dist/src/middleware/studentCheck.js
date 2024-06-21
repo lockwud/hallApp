@@ -19,13 +19,13 @@ const CustomError_1 = __importDefault(require("../utils/CustomError"));
 const httpstatus_1 = require("../utils/httpstatus");
 const checkAvailability = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const telephone = req.body;
+        const { telephone } = req.body;
         const student = yield prismaUtil_1.default.student.findUnique({
             where: {
-                telephone
+                telephone: telephone
             }
         });
-        if (!student) {
+        if (student) {
             res.status(httpstatus_1.httpstatus.UNAUTHORIZED).json({ message: "Student Already Registered" });
         }
         else {

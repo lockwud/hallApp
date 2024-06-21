@@ -3,11 +3,12 @@ import adminRouter from "./admin.router";
 import router  from "./studentRoute"
 import roomRouter from "./roomsRoute"
 const studentRouter = router;
-
+import hall from "./hall.router"
 const mainRouter = Router();
 
 mainRouter.use("/admin", adminRouter);
 mainRouter.use("/student", studentRouter)
 mainRouter.use("/room", roomRouter)
+mainRouter.use("/hall",hall)
 
 export default mainRouter;

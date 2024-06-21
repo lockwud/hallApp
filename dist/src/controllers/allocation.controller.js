@@ -14,6 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteAllocation = exports.getAnalytics = exports.getAllAlacocation = exports.updateAllocation = exports.findAllocationById = exports.saveAllocation = void 0;
 const logger_1 = __importDefault(require("../utils/logger"));
+const CustomError_1 = __importDefault(require("../utils/CustomError"));
 const allocation_1 = require("../helpers/allocation");
 const saveAllocation = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
@@ -25,7 +26,7 @@ const saveAllocation = (req, res, next) => __awaiter(void 0, void 0, void 0, fun
     }
     catch (error) {
         logger_1.default.error(error);
-        next(error);
+        next(new CustomError_1.default(500, error.toString()));
     }
 });
 exports.saveAllocation = saveAllocation;
@@ -39,7 +40,7 @@ const findAllocationById = (req, res, next) => __awaiter(void 0, void 0, void 0,
     }
     catch (error) {
         logger_1.default.error(error);
-        next(error);
+        next(new CustomError_1.default(500, error.toString()));
     }
 });
 exports.findAllocationById = findAllocationById;
@@ -54,7 +55,7 @@ const updateAllocation = (req, res, next) => __awaiter(void 0, void 0, void 0, f
     }
     catch (error) {
         logger_1.default.error(error);
-        next(error);
+        next(new CustomError_1.default(500, error.toString()));
     }
 });
 exports.updateAllocation = updateAllocation;
@@ -67,7 +68,7 @@ const getAllAlacocation = (req, res, next) => __awaiter(void 0, void 0, void 0, 
     }
     catch (error) {
         logger_1.default.error(error);
-        next(error);
+        next(new CustomError_1.default(500, error.toString()));
     }
 });
 exports.getAllAlacocation = getAllAlacocation;
@@ -80,7 +81,7 @@ const getAnalytics = (req, res, next) => __awaiter(void 0, void 0, void 0, funct
     }
     catch (error) {
         logger_1.default.error(error);
-        next(error);
+        next(new CustomError_1.default(500, error.toString()));
     }
 });
 exports.getAnalytics = getAnalytics;
@@ -94,7 +95,7 @@ const deleteAllocation = (req, res, next) => __awaiter(void 0, void 0, void 0, f
     }
     catch (error) {
         logger_1.default.error(error);
-        next(error);
+        next(new CustomError_1.default(500, error.toString()));
     }
 });
 exports.deleteAllocation = deleteAllocation;
