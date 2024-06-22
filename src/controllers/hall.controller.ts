@@ -24,7 +24,7 @@ export const registerHall = async (
         });
     } catch (error: any) {
         logger.error(error);
-        next(new CustomError(500, error.toString()));
+        next(new CustomError(httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 };
 
@@ -38,7 +38,7 @@ export const getHall = async (req: Request, res: Response, next: NextFunction) =
         });
     } catch (error: any) {
         logger.error(error);
-        next(new CustomError(500, error.toString()));
+        next(new CustomError(httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 }
 
@@ -51,7 +51,7 @@ export const loadHalls = async (req: Request, res: Response, next: NextFunction)
         });
     } catch (error: any) {
         logger.error(error);
-        next(new CustomError(500, error.toString()));
+        next(new CustomError(httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 }
 export const updateHall = async (req: Request, res: Response, next: NextFunction) => {
@@ -65,7 +65,7 @@ export const updateHall = async (req: Request, res: Response, next: NextFunction
         });
     } catch (error: any) {
         logger.error(error);
-        next(new CustomError(500, error.toString()));
+        next(new CustomError(httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 }
 
@@ -79,6 +79,6 @@ export const removeHall = async (req: Request, res: Response, next: NextFunction
 
     } catch (error: any) {
         logger.error(error);
-        next(new CustomError(500, error.toString()));
+        next(new CustomError(httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 }
