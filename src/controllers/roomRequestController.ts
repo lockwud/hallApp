@@ -20,7 +20,7 @@ export const addRequest = async (req: Request, res: Response, next: NextFunction
         });
     } catch (error: any) {
         logger.error(error);
-        next(new customError(500, error.toString()))
+        next(new customError(httpstatus.INTERNAL_SERVER_ERROR, error.toString()))
     }
 };
 
@@ -32,7 +32,7 @@ export const getRequests = async (req: Request, res: Response, next: NextFunctio
         });
     } catch (error: any) {
         logger.error(error);
-        next(new customError(500, error.toString()))
+        next(new customError(httpstatus.INTERNAL_SERVER_ERROR, error.toString()))
     }
 };
 
@@ -47,7 +47,7 @@ export const getRequestById = async (req: Request, res: Response, next: NextFunc
    }catch(error: any){
     console.log(error)
     logger.error(error)
-    next(new customError(500, error.toString()))
+    next(new customError(httpstatus.INTERNAL_SERVER_ERROR, error.toString()))
    }
     
 };
@@ -64,7 +64,7 @@ export const updateRequest = async(req: Request, res: Response, next: NextFuncti
    }catch(error: any){
     console.log(error)
     logger.error(error)
-    next(new customError(500, error.toString()))
+    next(new customError(httpstatus.INTERNAL_SERVER_ERROR, error.toString()))
    }
     
 }
@@ -80,7 +80,7 @@ export const removeRequest = async(req: Request, res: Response, next: NextFuncti
 }catch(error: any){
     console.log(error)
     logger.error(error)
-    next(new customError(500, error.toString()))
+    next(new customError(httpstatus.INTERNAL_SERVER_ERROR, error.toString()))
 }
 };
 

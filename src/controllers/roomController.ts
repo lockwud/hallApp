@@ -20,7 +20,7 @@ export const addRoom = async(req: Request, res: Response, next: NextFunction)=>{
     }catch(error: any){
         console.log(error)
         logger.error(error)
-        next(new customError(500, error.toString()))
+        next(new customError(httpstatus.INTERNAL_SERVER_ERROR, error.toString()))
     }
     
 };
@@ -33,7 +33,7 @@ export const listRoom = async(req: Request, res: Response, next: NextFunction)=>
     }catch(error: any){
         console.log(error)
         logger.error(error)
-        next(new customError(500, error.toString()))
+        next(new customError(httpstatus.INTERNAL_SERVER_ERROR, error.toString()))
     }
     
 };
@@ -47,7 +47,7 @@ export const getRoomById = async(req: Request, res: Response, next: NextFunction
     }catch(error: any){
         console.log(error)
         logger.error(error)
-        next(new customError(500, error.toString()))
+        next(new customError(httpstatus.INTERNAL_SERVER_ERROR, error.toString()))
     }
     
 };
@@ -62,7 +62,7 @@ export const roomUpdate = async(req: Request, res: Response, next: NextFunction)
     }catch(error: any){
         console.log(error)
         logger.error(error)
-        next(new customError(500, error.toString()))
+        next(new customError(httpstatus.INTERNAL_SERVER_ERROR, error.toString()))
     }
 };
 
@@ -76,7 +76,7 @@ export const deleteRoom = async(req: Request, res: Response, next: NextFunction)
     }catch(error: any){
         console.log(error)
         logger.error(error)
-        next(new customError(500, error.toString()))
+        next(new customError(httpstatus.INTERNAL_SERVER_ERROR, error.toString()))
     }
 };
 

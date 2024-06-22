@@ -22,7 +22,7 @@ export const registerStudent = async (req: Request, res: Response, next: NextFun
         data.level = parseInt(data.level)
         const student = await addStudent(data)
         if (!student) {
-            throw new customError(500, "An Error Occured")
+            throw new customError(httpstatus.INTERNAL_SERVER_ERROR, "An Error Occured")
         }
         //   destructure  the password out of the student object 
         const { password, ...studentWithoutPassword } = student;
@@ -34,7 +34,7 @@ export const registerStudent = async (req: Request, res: Response, next: NextFun
     } catch (error: any) {
         console.log(error)
         logger.error(error)
-        next(new customError(500, error.toString()))
+        next(new customError(httpstatus.INTERNAL_SERVER_ERROR, error.toString()))
     }
 };
 
@@ -46,7 +46,7 @@ export const getStudents = async (req: Request, res: Response, next: NextFunctio
     } catch (error: any) {
         console.log(error)
         logger.error(error)
-        next(new customError(500, error.toString()))
+        next(new customError(httpstatus.INTERNAL_SERVER_ERROR, error.toString()))
     }
 };
 
@@ -59,7 +59,7 @@ export const getStudentsById = async (req: Request, res: Response, next: NextFun
     } catch (error: any) {
         console.log(error)
         logger.error(error)
-        next(new customError(500, error.toString()))
+        next(new customError(httpstatus.INTERNAL_SERVER_ERROR, error.toString()))
     }
 };
 
@@ -73,7 +73,7 @@ export const updateStudentData = async (req: Request, res: Response, next: NextF
     } catch (error: any) {
         console.log(error)
         logger.error(error)
-        next(new customError(500, error.toString()))
+        next(new customError(httpstatus.INTERNAL_SERVER_ERROR, error.toString()))
     }
 };
 
@@ -86,7 +86,7 @@ export const deleteStudentData = async (req: Request, res: Response, next: NextF
     } catch (error: any) {
         console.log(error)
         logger.error(error)
-        next(new customError(500, error.toString()))
+        next(new customError(httpstatus.INTERNAL_SERVER_ERROR, error.toString()))
     }
 };
 
@@ -102,7 +102,7 @@ export const login = async (req: Request, res: Response, next: NextFunction) => 
             const checkPassword = await verifyPassword(password, studentPassword);
             if (!checkPassword) {
 
-                throw new customError(400, 'Invalid credentials');
+                throw new customError(httpstatus.BAD_REQUEST, 'Invalid credentials');
             } else {
                 delete req.student.password;
                 res.status(httpstatus.OK).json({
@@ -117,6 +117,6 @@ export const login = async (req: Request, res: Response, next: NextFunction) => 
 
     } catch (error: any) {
         logger.error(error)
-        next(new customError(500, error.toString()))
+        next(new customError(httpstatus.INTERNAL_SERVER_ERROR, error.toString()))
     }
 };
