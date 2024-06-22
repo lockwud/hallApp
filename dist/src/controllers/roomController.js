@@ -71,6 +71,11 @@ const roomUpdate = (req, res, next) => __awaiter(void 0, void 0, void 0, functio
 exports.roomUpdate = roomUpdate;
 const deleteRoom = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
+        const { id } = req.params;
+        const room = yield (0, rooms_1.removeRoom)(id);
+        res.status(httpstatus_1.httpstatus.OK).json({
+            room
+        });
     }
     catch (error) {
         console.log(error);
