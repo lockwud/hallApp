@@ -26,7 +26,7 @@ const addRoom = (req, res, next) => __awaiter(void 0, void 0, void 0, function* 
     catch (error) {
         console.log(error);
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.addRoom = addRoom;
@@ -38,7 +38,7 @@ const listRoom = (req, res, next) => __awaiter(void 0, void 0, void 0, function*
     catch (error) {
         console.log(error);
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.listRoom = listRoom;
@@ -51,7 +51,7 @@ const getRoomById = (req, res, next) => __awaiter(void 0, void 0, void 0, functi
     catch (error) {
         console.log(error);
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.getRoomById = getRoomById;
@@ -65,7 +65,7 @@ const roomUpdate = (req, res, next) => __awaiter(void 0, void 0, void 0, functio
     catch (error) {
         console.log(error);
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.roomUpdate = roomUpdate;
@@ -80,7 +80,7 @@ const deleteRoom = (req, res, next) => __awaiter(void 0, void 0, void 0, functio
     catch (error) {
         console.log(error);
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.deleteRoom = deleteRoom;

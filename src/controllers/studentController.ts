@@ -3,6 +3,10 @@ import { httpstatus } from "../utils/httpstatus";
 import customError from "../utils/CustomError";
 import { hashPassword, verifyPassword } from "../utils/argon2";
 import logger from "../utils/logger";
+import {cloudinary}  from "../utils/cloudinary"
+
+
+
 
 import {
     addStudent,
@@ -20,6 +24,16 @@ export const registerStudent = async (req: Request, res: Response, next: NextFun
         const data: any = req.body
         data.password = await hashPassword(data.password)
         data.level = parseInt(data.level)
+
+        const profile = req.file ? req.file.path : undefined;
+        if (profile) {
+          const uploaded = await cloudinary.uploader.upload(profile, {
+            folder: "student/profile",
+          });
+          if (uploaded) {
+            data.profile = uploaded.secure_url;
+          }
+        }
         const student = await addStudent(data)
         if (!student) {
             throw new customError(httpstatus.INTERNAL_SERVER_ERROR, "An Error Occured")

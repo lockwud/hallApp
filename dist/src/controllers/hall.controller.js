@@ -27,7 +27,7 @@ const registerHall = (req, res, next) => __awaiter(void 0, void 0, void 0, funct
     }
     catch (error) {
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.registerHall = registerHall;
@@ -41,7 +41,7 @@ const getHall = (req, res, next) => __awaiter(void 0, void 0, void 0, function* 
     }
     catch (error) {
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.getHall = getHall;
@@ -54,7 +54,7 @@ const loadHalls = (req, res, next) => __awaiter(void 0, void 0, void 0, function
     }
     catch (error) {
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.loadHalls = loadHalls;
@@ -69,7 +69,7 @@ const updateHall = (req, res, next) => __awaiter(void 0, void 0, void 0, functio
     }
     catch (error) {
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.updateHall = updateHall;
@@ -83,7 +83,7 @@ const removeHall = (req, res, next) => __awaiter(void 0, void 0, void 0, functio
     }
     catch (error) {
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.removeHall = removeHall;
