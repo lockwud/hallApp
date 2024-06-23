@@ -1,0 +1,23 @@
+2024-06-23T22:45:49.340Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.create()` invocation in
+/home/sam/Documents/hallApp/dist/src/helpers/student.js:18:56
+
+  15 exports.signIn = exports.deleteStudent = exports.updateStudent = exports.getStudentById = exports.getStudent = exports.addStudent = void 0;
+  16 const prismaUtil_1 = __importDefault(require("../utils/prismaUtil"));
+  17 const addStudent = (data) => __awaiter(void 0, void 0, void 0, function* () {
+→ 18     const student = yield prismaUtil_1.default.student.create({
+           data: {
+             fullName: "samuel Freeman",
+             email: "samuelmanuelsenior@gmail.com",
+             gender: "Male",
+             level: 200,
+             telephone: "2330984585979",
+             studentId: "38294824394787",
+             password: "$argon2id$v=19$m=65536,t=3,p=4$FxBxdYVh7iO8bDow8wDItQ$6sIDoNg/ejGSk67LveEb8wFNiReI56dzOXd3EF0K1pc",
+         +   profile: String
+           }
+         })
+
+Argument `profile` is missing.
+2024-06-23T22:52:33.909Z [31merror[39m:	Cannot read properties of undefined (reading 'upload')
+2024-06-23T22:56:55.014Z [31merror[39m:	Must supply api_key
