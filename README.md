@@ -1,105 +1,87 @@
-Hall Management System Backend
-Overview
+# Hall Management System Backend
 
+## Overview
 This repository contains the backend of the Hall Management System, built using TypeScript. The system aims to efficiently manage hall operations, including room assignments, student information, and various requests. The frontend will be developed using React in future updates.
-ERD of the Schema
 
-You can view the Entity-Relationship Diagram (ERD) of the schema here.
-Hosted Link
+## ERD of the Schema
+You can view the Entity-Relationship Diagram (ERD) of the schema [here](https://app.eraser.io/workspace/rR1oOEqqieszAuHwvJca?origin=share&elements=-1fdd7MLdrvIJDsUP7uKLg).
 
-The backend is hosted on Render.com. You can access it here.
-Web User Functionalities
-User Authentication
+## Hosted Link
+The backend is hosted on Render.com. You can access it [here](https://hallmanagementsystem.onrender.com).
 
-    Admin and User login/logout functionality.
+## Web User Functionalities
 
-Dashboard
+### User Authentication
+- **Admin and User login/logout functionality.**
 
-    Overview of hall occupancy, available rooms, and pending requests.
+### Dashboard
+- **Overview of hall occupancy, available rooms, and pending requests.**
 
-Room Assignment
+### Room Assignment
+- **Assign rooms to students based on various criteria.**
 
-    Assign rooms to students based on various criteria.
+### Student Management
+- **Add, edit, or remove student information.**
+- **View student details and occupancy status.**
 
-Student Management
+### Room Management
+- **Add, edit, or remove room details (room capacity).**
+- **Track room occupancy and availability.**
 
-    Add, edit, or remove student information.
-    View student details and occupancy status.
+### Request Management
+- **Handle room change requests.**
+- **Manage requests for special accommodations.**
 
-Room Management
+### Notifications (Pending)
+- **Send notifications to students or other admins about room assignments or changes.**
 
-    Add, edit, or remove room details (room capacity).
-    Track room occupancy and availability.
+### Reports (Pending)
+- **Generate reports on hall occupancy, room utilization, etc.**
 
-Request Management
+### Audit Trail (Pending)
+- **Track and log changes made by admins or users for accountability.**
 
-    Handle room change requests.
-    Manage requests for special accommodations.
+### Settings
+- **Configure system settings (notification preferences, admin profiles, etc.).**
 
-Notifications (Pending)
+## Mobile User Functionalities
 
-    Send notifications to students or other admins about room assignments or changes.
+### User Authentication
+- **Student login/logout functionality.**
 
-Reports (Pending)
+### Dashboard
+- **Display student-specific information (room assignment, hall details, etc.).**
+- **View and update personal details.**
+- **Check room assignments and room details.**
 
-    Generate reports on hall occupancy, room utilization, etc.
+### Request Submission
+- **Submit room change requests or requests for special accommodations.**
 
-Audit Trail (Pending)
+### Notifications (Pending)
+- **Receive notifications.**
 
-    Track and log changes made by admins or users for accountability.
+### Hall Information
+- **View information about the hall.**
 
-Settings
+### Feedback
+- **Provide feedback or report issues.**
 
-    Configure system settings (notification preferences, admin profiles, etc.).
+### Calendar (Pending)
+- **Display important dates (check-in, check-out).**
 
-Mobile User Functionalities
-User Authentication
+### Emergency Contacts (Pending)
+- **Access emergency contact information.**
 
-    Student login/logout functionality.
+### Settings
+- **Personal app settings (notification preferences (Pending), theme (Pending), etc.).**
 
-Dashboard
-
-    Display student-specific information (room assignment, hall details, etc.).
-    View and update personal details.
-    Check room assignments and room details.
-
-Request Submission
-
-    Submit room change requests or requests for special accommodations.
-
-Notifications (Pending)
-
-    Receive notifications.
-
-Hall Information
-
-    View information about the hall.
-
-Feedback
-
-    Provide feedback or report issues.
-
-Calendar (Pending)
-
-    Display important dates (check-in, check-out).
-
-Emergency Contacts (Pending)
-
-    Access emergency contact information.
-
-Settings
-
-    Personal app settings (notification preferences (Pending), theme (Pending), etc.).
-
-Future Updates
-
+## Future Updates
 The backend is currently in TypeScript, and we plan to integrate the frontend using React. Stay tuned for updates as we continue to improve and expand the functionality of the Hall Management System.
-Getting Started
 
+## Getting Started
 To get started with the backend, clone the repository and install the necessary dependencies:
 
-bash
-
+```bash
 git clone <repository-url>
 cd hall-management-system-backend
 npm install
