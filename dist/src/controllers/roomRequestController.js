@@ -27,7 +27,7 @@ const addRequest = (req, res, next) => __awaiter(void 0, void 0, void 0, functio
     }
     catch (error) {
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.addRequest = addRequest;
@@ -40,7 +40,7 @@ const getRequests = (req, res, next) => __awaiter(void 0, void 0, void 0, functi
     }
     catch (error) {
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.getRequests = getRequests;
@@ -55,7 +55,7 @@ const getRequestById = (req, res, next) => __awaiter(void 0, void 0, void 0, fun
     catch (error) {
         console.log(error);
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.getRequestById = getRequestById;
@@ -71,7 +71,7 @@ const updateRequest = (req, res, next) => __awaiter(void 0, void 0, void 0, func
     catch (error) {
         console.log(error);
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.updateRequest = updateRequest;
@@ -86,7 +86,7 @@ const removeRequest = (req, res, next) => __awaiter(void 0, void 0, void 0, func
     catch (error) {
         console.log(error);
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.removeRequest = removeRequest;

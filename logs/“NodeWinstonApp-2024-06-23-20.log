@@ -1,0 +1,82 @@
+2024-06-23T20:40:14.898Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.findUnique()` invocation in
+C:\Users\Python\Documents\project\hallApp\dist\src\middleware\studentCheck.js:23:60
+
+  20 const checkAvailability = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+  21     try {
+  22         const { telephone } = req.body;
+→ 23         const student = yield prismaUtil_1.default.student.findUnique(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2024-06-23T20:40:37.653Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.findUnique()` invocation in
+C:\Users\Python\Documents\project\hallApp\dist\src\middleware\studentCheck.js:23:60
+
+  20 const checkAvailability = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+  21     try {
+  22         const { telephone } = req.body;
+→ 23         const student = yield prismaUtil_1.default.student.findUnique(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2024-06-23T20:40:44.907Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.create()` invocation in
+C:\Users\Python\Documents\project\hallApp\dist\src\helpers\student.js:18:56
+
+  15 exports.signIn = exports.deleteStudent = exports.updateStudent = exports.getStudentById = exports.getStudent = exports.addStudent = void 0;
+  16 const prismaUtil_1 = __importDefault(require("../utils/prismaUtil"));
+  17 const addStudent = (data) => __awaiter(void 0, void 0, void 0, function* () {
+→ 18     const student = yield prismaUtil_1.default.student.create({
+           data: {
+             fullName: "Obeng Boadu Clement",
+             email: "test01",
+             password: "$argon2id$v=19$m=65536,t=3,p=4$djxuSfFqcPxK5m1mgvO61g$96YLR3dNursstZ7LVjp3aN40jnfF7d0qGmIj07PzQzg",
+             gender: "M",
+             level: 200,
+             telephone: "+233544102009",
+         +   profile: String
+           }
+         })
+
+Argument `profile` is missing.
+2024-06-23T20:41:46.458Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.create()` invocation in
+C:\Users\Python\Documents\project\hallApp\dist\src\helpers\student.js:18:56
+
+  15 exports.signIn = exports.deleteStudent = exports.updateStudent = exports.getStudentById = exports.getStudent = exports.addStudent = void 0;
+  16 const prismaUtil_1 = __importDefault(require("../utils/prismaUtil"));
+  17 const addStudent = (data) => __awaiter(void 0, void 0, void 0, function* () {
+→ 18     const student = yield prismaUtil_1.default.student.create({
+           data: {
+             fullName: "Obeng Boadu Clement",
+             email: "test01",
+             password: "$argon2id$v=19$m=65536,t=3,p=4$NU1shM+bYZnmWtXeSVPKGQ$2F6do5XXcMiAmyhWD0z0WkkNsmU8yon4AS7mfWaQ1RI",
+             gender: "M",
+             level: 200,
+             telephone: "+233544102009",
+         +   profile: String
+           }
+         })
+
+Argument `profile` is missing.
+2024-06-23T20:44:02.435Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.create()` invocation in
+C:\Users\Python\Documents\project\hallApp\dist\src\helpers\student.js:18:56
+
+  15 exports.signIn = exports.deleteStudent = exports.updateStudent = exports.getStudentById = exports.getStudent = exports.addStudent = void 0;
+  16 const prismaUtil_1 = __importDefault(require("../utils/prismaUtil"));
+  17 const addStudent = (data) => __awaiter(void 0, void 0, void 0, function* () {
+→ 18     const student = yield prismaUtil_1.default.student.create({
+           data: {
+             fullName: "Obeng Boadu Clement",
+             email: "test01",
+             password: "$argon2id$v=19$m=65536,t=3,p=4$O45D5wxIDiyj7YIqWGb/lg$uhaltghPZn29XGATX56j6/D0nNdGMHDTpMXObrAetSk",
+             gender: "M",
+             level: 200,
+             telephone: "+233544102009",
+         +   profile: String
+           }
+         })
+
+Argument `profile` is missing.

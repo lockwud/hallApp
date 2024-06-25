@@ -13,13 +13,17 @@ import {
     signIn
 
 } from "../helpers/student";
+import { studentSchema } from "../utils/zodSchema";
 
 export const registerStudent = async (req: Request, res: Response, next: NextFunction) => {
     try {
-
+        
+        
         const data: any = req.body
+        studentSchema.parse(req.body)
         data.password = await hashPassword(data.password)
         data.level = parseInt(data.level)
+        
         const student = await addStudent(data)
         if (!student) {
             throw new customError(httpstatus.INTERNAL_SERVER_ERROR, "An Error Occured")

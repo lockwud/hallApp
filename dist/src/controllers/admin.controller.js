@@ -35,7 +35,7 @@ const adminSignUp = (req, res, next) => __awaiter(void 0, void 0, void 0, functi
         data.password = yield (0, argon2_1.hashPassword)(data.password);
         const admin = yield (0, admin_1.addAdmin)(data);
         if (!admin) {
-            throw new CustomError_1.default(500, "An Error Occured");
+            throw new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, "An Error Occured");
         }
         const { password } = admin, adminWithoutPassword = __rest(admin, ["password"]);
         console.log(adminWithoutPassword);
@@ -46,7 +46,7 @@ const adminSignUp = (req, res, next) => __awaiter(void 0, void 0, void 0, functi
     }
     catch (error) {
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.adminSignUp = adminSignUp;
@@ -60,7 +60,7 @@ const login = (req, res, next) => __awaiter(void 0, void 0, void 0, function* ()
         }
         else {
             delete req.admin.password;
-            res.status(200).json({
+            res.status(httpstatus_1.httpstatus.OK).json({
                 message: 'User successfully logged in!',
                 id: req.admin.id,
             });
@@ -68,20 +68,20 @@ const login = (req, res, next) => __awaiter(void 0, void 0, void 0, function* ()
     }
     catch (error) {
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.login = login;
 const getAdmins = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const admins = yield (0, admin_1.loadAdmins)();
-        res.status(200).json({
+        res.status(httpstatus_1.httpstatus.OK).json({
             admins
         });
     }
     catch (error) {
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.getAdmins = getAdmins;
@@ -90,13 +90,13 @@ const updateAdmin = (req, res, next) => __awaiter(void 0, void 0, void 0, functi
         const { id } = req.params;
         const data = req.body;
         const admin = yield (0, admin_1.editAdmin)(id, data);
-        res.status(200).json({
+        res.status(httpstatus_1.httpstatus.OK).json({
             admin
         });
     }
     catch (error) {
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.updateAdmin = updateAdmin;
@@ -106,13 +106,13 @@ const getSingleAdmin = (req, res, next) => __awaiter(void 0, void 0, void 0, fun
         const { id } = req.params;
         const admin = yield (0, admin_1.loadSingleAdmin)(id);
         const { password } = admin, adminWithoutPassword = __rest(admin, ["password"]);
-        res.status(200).json({
+        res.status(httpstatus_1.httpstatus.OK).json({
             adminWithoutPassword
         });
     }
     catch (error) {
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.getSingleAdmin = getSingleAdmin;
@@ -120,13 +120,13 @@ const removeAdmin = (req, res, next) => __awaiter(void 0, void 0, void 0, functi
     try {
         const { id } = req.params;
         const admin = yield (0, admin_1.deleteAdmin)(id);
-        res.status(200).json({
+        res.status(httpstatus_1.httpstatus.OK).json({
             admin
         });
     }
     catch (error) {
         logger_1.default.error(error);
-        next(new CustomError_1.default(500, error.toString()));
+        next(new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, error.toString()));
     }
 });
 exports.removeAdmin = removeAdmin;
