@@ -3,7 +3,7 @@ import { httpstatus } from "../utils/httpstatus";
 import customError from "../utils/CustomError";
 import { hashPassword, verifyPassword } from "../utils/argon2";
 import logger from "../utils/logger";
-import {cloudinary}  from "../utils/cloudinary"
+import { cloudinary } from "../utils/cloudinary"
 
 
 
@@ -17,25 +17,25 @@ import {
     signIn
 
 } from "../helpers/student";
-import { studentSchema } from "../utils/zodSchema";
+
 
 export const registerStudent = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        
-        
+
+
         const data: any = req.body
-        studentSchema.parse(req.body)
+
         data.password = await hashPassword(data.password)
         data.level = parseInt(data.level)
 
         const profile = req.file ? req.file.path : undefined;
         if (profile) {
-          const uploaded = await cloudinary.uploader.upload(profile, {
-            folder: "student/profile",
-          });
-          if (uploaded) {
-            data.profile = uploaded.secure_url;
-          }
+            const uploaded = await cloudinary.uploader.upload(profile, {
+                folder: "student/profile",
+            });
+            if (uploaded) {
+                data.profile = uploaded.secure_url;
+            }
         }
         const student = await addStudent(data)
         if (!student) {
