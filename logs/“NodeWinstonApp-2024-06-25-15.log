@@ -1,0 +1,18 @@
+2024-06-25T15:34:23.449Z [31merror[39m:	
+Invalid `prismaUtil_1.default.admin.create()` invocation in
+/home/sam/Documents/hallApp/dist/src/helpers/admin.js:46:52
+
+  43 });
+  44 exports.editAdmin = editAdmin;
+  45 const addAdmin = (data) => __awaiter(void 0, void 0, void 0, function* () {
+→ 46     const admin = yield prismaUtil_1.default.admin.create(
+Unique constraint failed on the fields: (`email`)
+2024-06-25T15:34:43.039Z [31merror[39m:	
+Invalid `prismaUtil_1.default.admin.create()` invocation in
+/home/sam/Documents/hallApp/dist/src/helpers/admin.js:46:52
+
+  43 });
+  44 exports.editAdmin = editAdmin;
+  45 const addAdmin = (data) => __awaiter(void 0, void 0, void 0, function* () {
+→ 46     const admin = yield prismaUtil_1.default.admin.create(
+Unique constraint failed on the fields: (`email`)
