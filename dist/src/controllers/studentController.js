@@ -34,7 +34,7 @@ const zodSchema_1 = require("../utils/zodSchema");
 const registerStudent = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const data = req.body;
-        zodSchema_1.studentSchema.parse(data);
+        zodSchema_1.studentSchema.parse(req.body);
         data.password = yield (0, argon2_1.hashPassword)(data.password);
         data.level = parseInt(data.level);
         const profile = req.file ? req.file.path : undefined;

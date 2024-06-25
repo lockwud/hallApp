@@ -11,6 +11,7 @@ import logger from "../utils/logger";
 export const adminSignUp = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const data: any = req.body;
+        
         data.password = await hashPassword(data.password)
         const admin = await addAdmin(data)
         if (!admin) {
