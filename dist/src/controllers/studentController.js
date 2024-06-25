@@ -28,6 +28,7 @@ const httpstatus_1 = require("../utils/httpstatus");
 const CustomError_1 = __importDefault(require("../utils/CustomError"));
 const argon2_1 = require("../utils/argon2");
 const logger_1 = __importDefault(require("../utils/logger"));
+const cloudinary_1 = require("../utils/cloudinary");
 const student_1 = require("../helpers/student");
 const zodSchema_1 = require("../utils/zodSchema");
 const registerStudent = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
@@ -36,6 +37,15 @@ const registerStudent = (req, res, next) => __awaiter(void 0, void 0, void 0, fu
         zodSchema_1.studentSchema.parse(data);
         data.password = yield (0, argon2_1.hashPassword)(data.password);
         data.level = parseInt(data.level);
+        const profile = req.file ? req.file.path : undefined;
+        if (profile) {
+            const uploaded = yield cloudinary_1.cloudinary.uploader.upload(profile, {
+                folder: "student/profile",
+            });
+            if (uploaded) {
+                data.profile = uploaded.secure_url;
+            }
+        }
         const student = yield (0, student_1.addStudent)(data);
         if (!student) {
             throw new CustomError_1.default(httpstatus_1.httpstatus.INTERNAL_SERVER_ERROR, "An Error Occured");
