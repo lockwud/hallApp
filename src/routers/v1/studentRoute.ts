@@ -8,7 +8,7 @@ import { studentSchema } from "../../utils/zodSchema";
 import validateRequest from "../../utils/validationError";
 
 
-router.post("/signUp", validateRequest(studentSchema), upload.single("profile"), checkAvailability, student.registerStudent);
+router.post("/signUp",  upload.single("profile"), validateRequest(studentSchema), checkAvailability, student.registerStudent);
 router.post("/login", student.login)
 router.get("/list", student.getStudents)
 router.get("/:id", student.getStudentsById)

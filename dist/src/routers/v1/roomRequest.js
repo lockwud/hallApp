@@ -22,11 +22,16 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const request = __importStar(require("../../controllers/roomRequestController"));
+const zodSchema_1 = require("../../utils/zodSchema");
+const validationError_1 = __importDefault(require("../../utils/validationError"));
 const requestRouter = (0, express_1.Router)();
-requestRouter.post("/save", request.addRequest);
+requestRouter.post("/save", (0, validationError_1.default)(zodSchema_1.studentSchema), request.addRequest);
 requestRouter.get("/list", request.getRequests);
 requestRouter.get("/:id", request.getRequestById);
 requestRouter.patch("/:id", request.updateRequest);

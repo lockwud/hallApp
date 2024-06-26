@@ -1,7 +1,6 @@
 import z from "zod"
 
 export const studentSchema = z.object({
-    profile: z.string(),
     fullName: z.string(),
     email: z.string().email(),
     password: z.string().min(8),
@@ -28,5 +27,9 @@ export const hallSchema = z.object({
 
 })
 export const roomSchema = z.object({
+
+})
+
+export const roomRequest = z.object({
 
 })
