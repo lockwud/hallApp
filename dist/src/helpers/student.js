@@ -46,7 +46,7 @@ exports.updateStudent = updateStudent;
 const deleteStudent = (studentId) => __awaiter(void 0, void 0, void 0, function* () {
     const student = yield prismaUtil_1.default.student.delete({
         where: {
-            studentId: studentId
+            studentId
         }
     });
     return student;

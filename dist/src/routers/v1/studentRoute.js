@@ -39,5 +39,5 @@ exports.router.post("/login", student.login);
 exports.router.get("/list", student.getStudents);
 exports.router.get("/:id", student.getStudentsById);
 exports.router.patch("/:id", student.updateStudentData);
-exports.router.delete("/:id", student.deleteStudentData);
+exports.router.delete("/:studentId", student.deleteStudentData);
 exports.default = exports.router;

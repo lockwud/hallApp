@@ -1,3 +1,4 @@
+import { status } from "@prisma/client"
 import z from "zod"
 
 export const studentSchema = z.object({
@@ -27,9 +28,7 @@ export const hallSchema = z.object({
 
 })
 export const roomSchema = z.object({
-
-})
-
-export const roomRequest = z.object({
+    roomnumber: z.string(),
+    blockName: z.string()
 
 })

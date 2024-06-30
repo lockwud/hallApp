@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.roomRequest = exports.roomSchema = exports.hallSchema = exports.allocationSchema = exports.adminSchema = exports.studentSchema = void 0;
+exports.roomSchema = exports.hallSchema = exports.allocationSchema = exports.adminSchema = exports.studentSchema = void 0;
 const zod_1 = __importDefault(require("zod"));
 exports.studentSchema = zod_1.default.object({
     fullName: zod_1.default.string(),
@@ -27,5 +27,7 @@ exports.hallSchema = zod_1.default.object({
     name: zod_1.default.string(),
     location: zod_1.default.string()
 });
-exports.roomSchema = zod_1.default.object({});
-exports.roomRequest = zod_1.default.object({});
+exports.roomSchema = zod_1.default.object({
+    roomnumber: zod_1.default.string(),
+    blockName: zod_1.default.string()
+});
