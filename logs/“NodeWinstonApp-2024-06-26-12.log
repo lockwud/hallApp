@@ -1,0 +1,341 @@
+2024-06-26T12:01:36.909Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.delete()` invocation in
+C:\Users\Python\Documents\project\hallApp\dist\src\helpers\student.js:47:62
+
+  44 });
+  45 exports.updateStudent = updateStudent;
+  46 const deleteStudent = (studentId) => __awaiter(void 0, void 0, void 0, function* () {
+→ 47     const student = yield prismaUtil_1.default.student.delete({
+           where: {
+             studentId: undefined,
+         ?   telephone?: String,
+         ?   AND?: studentWhereInput | studentWhereInput[],
+         ?   OR?: studentWhereInput[],
+         ?   NOT?: studentWhereInput | studentWhereInput[],
+         ?   profile?: StringFilter | String,
+         ?   fullName?: StringFilter | String,
+         ?   email?: StringNullableFilter | String | Null,
+         ?   password?: StringFilter | String,
+         ?   gender?: StringFilter | String,
+         ?   level?: IntFilter | Int,
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   department?: StringNullableFilter | String | Null,
+         ?   hallId?: StringNullableFilter | String | Null,
+         ?   allocation?: AllocationNullableRelationFilter | allocationWhereInput | Null,
+         ?   hall?: HallNullableRelationFilter | hallWhereInput | Null,
+         ?   roomRequest?: RoomRequestNullableRelationFilter | roomRequestWhereInput | Null
+           }
+         })
+
+Argument `where` of type studentWhereUniqueInput needs at least one of `studentId` or `telephone` arguments. Available options are marked with ?.
+2024-06-26T12:02:29.220Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.delete()` invocation in
+C:\Users\Python\Documents\project\hallApp\dist\src\helpers\student.js:47:62
+
+  44 });
+  45 exports.updateStudent = updateStudent;
+  46 const deleteStudent = (studentId) => __awaiter(void 0, void 0, void 0, function* () {
+→ 47     const student = yield prismaUtil_1.default.student.delete({
+           where: {
+             studentId: undefined,
+         ?   telephone?: String,
+         ?   AND?: studentWhereInput | studentWhereInput[],
+         ?   OR?: studentWhereInput[],
+         ?   NOT?: studentWhereInput | studentWhereInput[],
+         ?   profile?: StringFilter | String,
+         ?   fullName?: StringFilter | String,
+         ?   email?: StringNullableFilter | String | Null,
+         ?   password?: StringFilter | String,
+         ?   gender?: StringFilter | String,
+         ?   level?: IntFilter | Int,
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   department?: StringNullableFilter | String | Null,
+         ?   hallId?: StringNullableFilter | String | Null,
+         ?   allocation?: AllocationNullableRelationFilter | allocationWhereInput | Null,
+         ?   hall?: HallNullableRelationFilter | hallWhereInput | Null,
+         ?   roomRequest?: RoomRequestNullableRelationFilter | roomRequestWhereInput | Null
+           }
+         })
+
+Argument `where` of type studentWhereUniqueInput needs at least one of `studentId` or `telephone` arguments. Available options are marked with ?.
+2024-06-26T12:02:33.902Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.delete()` invocation in
+C:\Users\Python\Documents\project\hallApp\dist\src\helpers\student.js:47:62
+
+  44 });
+  45 exports.updateStudent = updateStudent;
+  46 const deleteStudent = (studentId) => __awaiter(void 0, void 0, void 0, function* () {
+→ 47     const student = yield prismaUtil_1.default.student.delete({
+           where: {
+             studentId: undefined,
+         ?   telephone?: String,
+         ?   AND?: studentWhereInput | studentWhereInput[],
+         ?   OR?: studentWhereInput[],
+         ?   NOT?: studentWhereInput | studentWhereInput[],
+         ?   profile?: StringFilter | String,
+         ?   fullName?: StringFilter | String,
+         ?   email?: StringNullableFilter | String | Null,
+         ?   password?: StringFilter | String,
+         ?   gender?: StringFilter | String,
+         ?   level?: IntFilter | Int,
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   department?: StringNullableFilter | String | Null,
+         ?   hallId?: StringNullableFilter | String | Null,
+         ?   allocation?: AllocationNullableRelationFilter | allocationWhereInput | Null,
+         ?   hall?: HallNullableRelationFilter | hallWhereInput | Null,
+         ?   roomRequest?: RoomRequestNullableRelationFilter | roomRequestWhereInput | Null
+           }
+         })
+
+Argument `where` of type studentWhereUniqueInput needs at least one of `studentId` or `telephone` arguments. Available options are marked with ?.
+2024-06-26T12:02:44.856Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.delete()` invocation in
+C:\Users\Python\Documents\project\hallApp\dist\src\helpers\student.js:47:62
+
+  44 });
+  45 exports.updateStudent = updateStudent;
+  46 const deleteStudent = (studentId) => __awaiter(void 0, void 0, void 0, function* () {
+→ 47     const student = yield prismaUtil_1.default.student.delete({
+           where: {
+             studentId: undefined,
+         ?   telephone?: String,
+         ?   AND?: studentWhereInput | studentWhereInput[],
+         ?   OR?: studentWhereInput[],
+         ?   NOT?: studentWhereInput | studentWhereInput[],
+         ?   profile?: StringFilter | String,
+         ?   fullName?: StringFilter | String,
+         ?   email?: StringNullableFilter | String | Null,
+         ?   password?: StringFilter | String,
+         ?   gender?: StringFilter | String,
+         ?   level?: IntFilter | Int,
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   department?: StringNullableFilter | String | Null,
+         ?   hallId?: StringNullableFilter | String | Null,
+         ?   allocation?: AllocationNullableRelationFilter | allocationWhereInput | Null,
+         ?   hall?: HallNullableRelationFilter | hallWhereInput | Null,
+         ?   roomRequest?: RoomRequestNullableRelationFilter | roomRequestWhereInput | Null
+           }
+         })
+
+Argument `where` of type studentWhereUniqueInput needs at least one of `studentId` or `telephone` arguments. Available options are marked with ?.
+2024-06-26T12:03:02.792Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.delete()` invocation in
+C:\Users\Python\Documents\project\hallApp\dist\src\helpers\student.js:47:62
+
+  44 });
+  45 exports.updateStudent = updateStudent;
+  46 const deleteStudent = (studentId) => __awaiter(void 0, void 0, void 0, function* () {
+→ 47     const student = yield prismaUtil_1.default.student.delete({
+           where: {
+             studentId: undefined,
+         ?   telephone?: String,
+         ?   AND?: studentWhereInput | studentWhereInput[],
+         ?   OR?: studentWhereInput[],
+         ?   NOT?: studentWhereInput | studentWhereInput[],
+         ?   profile?: StringFilter | String,
+         ?   fullName?: StringFilter | String,
+         ?   email?: StringNullableFilter | String | Null,
+         ?   password?: StringFilter | String,
+         ?   gender?: StringFilter | String,
+         ?   level?: IntFilter | Int,
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   department?: StringNullableFilter | String | Null,
+         ?   hallId?: StringNullableFilter | String | Null,
+         ?   allocation?: AllocationNullableRelationFilter | allocationWhereInput | Null,
+         ?   hall?: HallNullableRelationFilter | hallWhereInput | Null,
+         ?   roomRequest?: RoomRequestNullableRelationFilter | roomRequestWhereInput | Null
+           }
+         })
+
+Argument `where` of type studentWhereUniqueInput needs at least one of `studentId` or `telephone` arguments. Available options are marked with ?.
+2024-06-26T12:05:56.193Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.delete()` invocation in
+C:\Users\Python\Documents\project\hallApp\dist\src\helpers\student.js:47:62
+
+  44 });
+  45 exports.updateStudent = updateStudent;
+  46 const deleteStudent = (studentId) => __awaiter(void 0, void 0, void 0, function* () {
+→ 47     const student = yield prismaUtil_1.default.student.delete({
+           where: {
+             studentId: undefined,
+         ?   telephone?: String,
+         ?   AND?: studentWhereInput | studentWhereInput[],
+         ?   OR?: studentWhereInput[],
+         ?   NOT?: studentWhereInput | studentWhereInput[],
+         ?   profile?: StringFilter | String,
+         ?   fullName?: StringFilter | String,
+         ?   email?: StringNullableFilter | String | Null,
+         ?   password?: StringFilter | String,
+         ?   gender?: StringFilter | String,
+         ?   level?: IntFilter | Int,
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   department?: StringNullableFilter | String | Null,
+         ?   hallId?: StringNullableFilter | String | Null,
+         ?   allocation?: AllocationNullableRelationFilter | allocationWhereInput | Null,
+         ?   hall?: HallNullableRelationFilter | hallWhereInput | Null,
+         ?   roomRequest?: RoomRequestNullableRelationFilter | roomRequestWhereInput | Null
+           }
+         })
+
+Argument `where` of type studentWhereUniqueInput needs at least one of `studentId` or `telephone` arguments. Available options are marked with ?.
+2024-06-26T12:09:45.382Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.delete()` invocation in
+C:\Users\Python\Documents\project\hallApp\dist\src\helpers\student.js:47:62
+
+  44 });
+  45 exports.updateStudent = updateStudent;
+  46 const deleteStudent = (studentId) => __awaiter(void 0, void 0, void 0, function* () {
+→ 47     const student = yield prismaUtil_1.default.student.delete({
+           where: {
+             studentId: undefined,
+         ?   telephone?: String,
+         ?   AND?: studentWhereInput | studentWhereInput[],
+         ?   OR?: studentWhereInput[],
+         ?   NOT?: studentWhereInput | studentWhereInput[],
+         ?   profile?: StringFilter | String,
+         ?   fullName?: StringFilter | String,
+         ?   email?: StringNullableFilter | String | Null,
+         ?   password?: StringFilter | String,
+         ?   gender?: StringFilter | String,
+         ?   level?: IntFilter | Int,
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   department?: StringNullableFilter | String | Null,
+         ?   hallId?: StringNullableFilter | String | Null,
+         ?   allocation?: AllocationNullableRelationFilter | allocationWhereInput | Null,
+         ?   hall?: HallNullableRelationFilter | hallWhereInput | Null,
+         ?   roomRequest?: RoomRequestNullableRelationFilter | roomRequestWhereInput | Null
+           }
+         })
+
+Argument `where` of type studentWhereUniqueInput needs at least one of `studentId` or `telephone` arguments. Available options are marked with ?.
+2024-06-26T12:10:02.532Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.delete()` invocation in
+C:\Users\Python\Documents\project\hallApp\dist\src\helpers\student.js:47:62
+
+  44 });
+  45 exports.updateStudent = updateStudent;
+  46 const deleteStudent = (studentId) => __awaiter(void 0, void 0, void 0, function* () {
+→ 47     const student = yield prismaUtil_1.default.student.delete({
+           where: {
+             studentId: undefined,
+         ?   telephone?: String,
+         ?   AND?: studentWhereInput | studentWhereInput[],
+         ?   OR?: studentWhereInput[],
+         ?   NOT?: studentWhereInput | studentWhereInput[],
+         ?   profile?: StringFilter | String,
+         ?   fullName?: StringFilter | String,
+         ?   email?: StringNullableFilter | String | Null,
+         ?   password?: StringFilter | String,
+         ?   gender?: StringFilter | String,
+         ?   level?: IntFilter | Int,
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   department?: StringNullableFilter | String | Null,
+         ?   hallId?: StringNullableFilter | String | Null,
+         ?   allocation?: AllocationNullableRelationFilter | allocationWhereInput | Null,
+         ?   hall?: HallNullableRelationFilter | hallWhereInput | Null,
+         ?   roomRequest?: RoomRequestNullableRelationFilter | roomRequestWhereInput | Null
+           }
+         })
+
+Argument `where` of type studentWhereUniqueInput needs at least one of `studentId` or `telephone` arguments. Available options are marked with ?.
+2024-06-26T12:10:28.760Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.delete()` invocation in
+C:\Users\Python\Documents\project\hallApp\dist\src\helpers\student.js:47:62
+
+  44 });
+  45 exports.updateStudent = updateStudent;
+  46 const deleteStudent = (studentId) => __awaiter(void 0, void 0, void 0, function* () {
+→ 47     const student = yield prismaUtil_1.default.student.delete({
+           where: {
+             studentId: undefined,
+         ?   telephone?: String,
+         ?   AND?: studentWhereInput | studentWhereInput[],
+         ?   OR?: studentWhereInput[],
+         ?   NOT?: studentWhereInput | studentWhereInput[],
+         ?   profile?: StringFilter | String,
+         ?   fullName?: StringFilter | String,
+         ?   email?: StringNullableFilter | String | Null,
+         ?   password?: StringFilter | String,
+         ?   gender?: StringFilter | String,
+         ?   level?: IntFilter | Int,
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   department?: StringNullableFilter | String | Null,
+         ?   hallId?: StringNullableFilter | String | Null,
+         ?   allocation?: AllocationNullableRelationFilter | allocationWhereInput | Null,
+         ?   hall?: HallNullableRelationFilter | hallWhereInput | Null,
+         ?   roomRequest?: RoomRequestNullableRelationFilter | roomRequestWhereInput | Null
+           }
+         })
+
+Argument `where` of type studentWhereUniqueInput needs at least one of `studentId` or `telephone` arguments. Available options are marked with ?.
+2024-06-26T12:10:45.846Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.findUnique()` invocation in
+C:\Users\Python\Documents\project\hallApp\dist\src\helpers\student.js:30:56
+
+  27 });
+  28 exports.getStudent = getStudent;
+  29 const getStudentById = (studentId) => __awaiter(void 0, void 0, void 0, function* () {
+→ 30     const student = yield prismaUtil_1.default.student.findUnique({
+           where: {
+             studentId: undefined,
+         ?   telephone?: String,
+         ?   AND?: studentWhereInput | studentWhereInput[],
+         ?   OR?: studentWhereInput[],
+         ?   NOT?: studentWhereInput | studentWhereInput[],
+         ?   profile?: StringFilter | String,
+         ?   fullName?: StringFilter | String,
+         ?   email?: StringNullableFilter | String | Null,
+         ?   password?: StringFilter | String,
+         ?   gender?: StringFilter | String,
+         ?   level?: IntFilter | Int,
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   department?: StringNullableFilter | String | Null,
+         ?   hallId?: StringNullableFilter | String | Null,
+         ?   allocation?: AllocationNullableRelationFilter | allocationWhereInput | Null,
+         ?   hall?: HallNullableRelationFilter | hallWhereInput | Null,
+         ?   roomRequest?: RoomRequestNullableRelationFilter | roomRequestWhereInput | Null
+           }
+         })
+
+Argument `where` of type studentWhereUniqueInput needs at least one of `studentId` or `telephone` arguments. Available options are marked with ?.
+2024-06-26T12:10:56.872Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.findUnique()` invocation in
+C:\Users\Python\Documents\project\hallApp\dist\src\helpers\student.js:30:56
+
+  27 });
+  28 exports.getStudent = getStudent;
+  29 const getStudentById = (studentId) => __awaiter(void 0, void 0, void 0, function* () {
+→ 30     const student = yield prismaUtil_1.default.student.findUnique({
+           where: {
+             studentId: undefined,
+         ?   telephone?: String,
+         ?   AND?: studentWhereInput | studentWhereInput[],
+         ?   OR?: studentWhereInput[],
+         ?   NOT?: studentWhereInput | studentWhereInput[],
+         ?   profile?: StringFilter | String,
+         ?   fullName?: StringFilter | String,
+         ?   email?: StringNullableFilter | String | Null,
+         ?   password?: StringFilter | String,
+         ?   gender?: StringFilter | String,
+         ?   level?: IntFilter | Int,
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   department?: StringNullableFilter | String | Null,
+         ?   hallId?: StringNullableFilter | String | Null,
+         ?   allocation?: AllocationNullableRelationFilter | allocationWhereInput | Null,
+         ?   hall?: HallNullableRelationFilter | hallWhereInput | Null,
+         ?   roomRequest?: RoomRequestNullableRelationFilter | roomRequestWhereInput | Null
+           }
+         })
+
+Argument `where` of type studentWhereUniqueInput needs at least one of `studentId` or `telephone` arguments. Available options are marked with ?.

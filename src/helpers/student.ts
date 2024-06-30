@@ -40,7 +40,7 @@ export const updateStudent = async(studentId: string, data: any)=>{
 export const deleteStudent = async(studentId: string)=>{
     const student = await prisma.student.delete({
         where:{
-            studentId
+            studentId: studentId
         }
     })
     return student
