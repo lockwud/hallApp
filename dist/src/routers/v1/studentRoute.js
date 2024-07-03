@@ -34,10 +34,14 @@ const studentCheck_1 = require("../../middleware/studentCheck");
 const multer_1 = __importDefault(require("../../middleware/multer"));
 const zodSchema_1 = require("../../utils/zodSchema");
 const validationError_1 = __importDefault(require("../../utils/validationError"));
-exports.router.post("/signUp", (0, validationError_1.default)(zodSchema_1.studentSchema), multer_1.default.single("profile"), studentCheck_1.checkAvailability, student.registerStudent);
+
+exports.router.post("/signUp", multer_1.default.single("profile"), (0, validationError_1.default)(zodSchema_1.studentSchema), studentCheck_1.checkAvailability, student.registerStudent);
 exports.router.post("/login", student.login);
 exports.router.get("/list", student.getStudents);
 exports.router.get("/:id", student.getStudentsById);
 exports.router.patch("/:studentId", student.updateStudentData);
+
+
+
 exports.router.delete("/:studentId", student.deleteStudentData);
 exports.default = exports.router;

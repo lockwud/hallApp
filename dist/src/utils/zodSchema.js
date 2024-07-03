@@ -6,7 +6,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.roomSchema = exports.hallSchema = exports.allocationSchema = exports.adminSchema = exports.studentSchema = void 0;
 const zod_1 = __importDefault(require("zod"));
 exports.studentSchema = zod_1.default.object({
-    profile: zod_1.default.string(),
     fullName: zod_1.default.string(),
     email: zod_1.default.string().email(),
     password: zod_1.default.string().min(8),
@@ -28,4 +27,7 @@ exports.hallSchema = zod_1.default.object({
     name: zod_1.default.string(),
     location: zod_1.default.string()
 });
-exports.roomSchema = zod_1.default.object({});
+exports.roomSchema = zod_1.default.object({
+    roomnumber: zod_1.default.string(),
+    blockName: zod_1.default.string()
+});
