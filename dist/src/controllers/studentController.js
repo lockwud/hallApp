@@ -89,6 +89,7 @@ exports.getStudentsById = getStudentsById;
 const updateStudentData = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { studentId } = req.params;
+        console.log("check student id", studentId);
         const data = req.body;
         const student = yield (0, student_1.updateStudent)(studentId, data);
         res.status(httpstatus_1.httpstatus.OK).json({ student });

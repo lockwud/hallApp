@@ -83,6 +83,7 @@ export const getStudentsById = async (req: Request, res: Response, next: NextFun
 export const updateStudentData = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { studentId } = req.params
+        console.log("check student id",studentId);
         const data = req.body
         const student = await updateStudent(studentId, data)
         res.status(httpstatus.OK).json({ student })

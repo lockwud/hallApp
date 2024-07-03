@@ -12,7 +12,7 @@ router.post("/signUp",  upload.single("profile"), validateRequest(studentSchema)
 router.post("/login", student.login)
 router.get("/list", student.getStudents)
 router.get("/:id", student.getStudentsById)
-router.patch("/:id", student.updateStudentData)
-router.delete("/:id", student.deleteStudentData)
+router.patch("/:studentId", student.updateStudentData)
+router.delete("/:studentId", student.deleteStudentData)
 
 export default router;

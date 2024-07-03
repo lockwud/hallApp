@@ -1,0 +1,168 @@
+2024-07-03T23:43:18.935Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.update()` invocation in
+/home/sam/Documents/hallApp/dist/src/helpers/student.js:37:56
+
+  34 });
+  35 exports.getStudentById = getStudentById;
+  36 const updateStudent = (studentId, data) => __awaiter(void 0, void 0, void 0, function* () {
+→ 37     const student = yield prismaUtil_1.default.student.update({
+           where: {
+             studentId: undefined
+           },
+           data: {
+             fullname: "Clement Obeng",
+             ~~~~~~~~
+         ?   studentId?: String | StringFieldUpdateOperationsInput,
+         ?   profile?: String | StringFieldUpdateOperationsInput,
+         ?   fullName?: String | StringFieldUpdateOperationsInput,
+         ?   email?: String | NullableStringFieldUpdateOperationsInput | Null,
+         ?   password?: String | StringFieldUpdateOperationsInput,
+         ?   gender?: String | StringFieldUpdateOperationsInput,
+         ?   level?: Int | IntFieldUpdateOperationsInput,
+         ?   telephone?: String | StringFieldUpdateOperationsInput,
+         ?   createdAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+         ?   updatedAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+         ?   department?: String | NullableStringFieldUpdateOperationsInput | Null,
+         ?   allocation?: allocationUpdateOneWithoutStudentNestedInput,
+         ?   hall?: hallUpdateOneWithoutStudentNestedInput,
+         ?   roomRequest?: roomRequestUpdateOneWithoutStudentNestedInput
+           }
+         })
+
+Unknown argument `fullname`. Did you mean `fullName`? Available options are marked with ?.
+2024-07-03T23:43:34.049Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.update()` invocation in
+/home/sam/Documents/hallApp/dist/src/helpers/student.js:37:56
+
+  34 });
+  35 exports.getStudentById = getStudentById;
+  36 const updateStudent = (studentId, data) => __awaiter(void 0, void 0, void 0, function* () {
+→ 37     const student = yield prismaUtil_1.default.student.update({
+           where: {
+             studentId: undefined,
+         ?   telephone?: String,
+         ?   AND?: studentWhereInput | studentWhereInput[],
+         ?   OR?: studentWhereInput[],
+         ?   NOT?: studentWhereInput | studentWhereInput[],
+         ?   profile?: StringFilter | String,
+         ?   fullName?: StringFilter | String,
+         ?   email?: StringNullableFilter | String | Null,
+         ?   password?: StringFilter | String,
+         ?   gender?: StringFilter | String,
+         ?   level?: IntFilter | Int,
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   department?: StringNullableFilter | String | Null,
+         ?   hallId?: StringNullableFilter | String | Null,
+         ?   allocation?: AllocationNullableRelationFilter | allocationWhereInput | Null,
+         ?   hall?: HallNullableRelationFilter | hallWhereInput | Null,
+         ?   roomRequest?: RoomRequestNullableRelationFilter | roomRequestWhereInput | Null
+           },
+           data: {
+             fullName: "Clement Obeng"
+           }
+         })
+
+Argument `where` of type studentWhereUniqueInput needs at least one of `studentId` or `telephone` arguments. Available options are marked with ?.
+2024-07-03T23:45:09.565Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.update()` invocation in
+/home/sam/Documents/hallApp/dist/src/helpers/student.js:37:56
+
+  34 });
+  35 exports.getStudentById = getStudentById;
+  36 const updateStudent = (studentId, data) => __awaiter(void 0, void 0, void 0, function* () {
+→ 37     const student = yield prismaUtil_1.default.student.update({
+           where: {
+             studentId: undefined,
+         ?   telephone?: String,
+         ?   AND?: studentWhereInput | studentWhereInput[],
+         ?   OR?: studentWhereInput[],
+         ?   NOT?: studentWhereInput | studentWhereInput[],
+         ?   profile?: StringFilter | String,
+         ?   fullName?: StringFilter | String,
+         ?   email?: StringNullableFilter | String | Null,
+         ?   password?: StringFilter | String,
+         ?   gender?: StringFilter | String,
+         ?   level?: IntFilter | Int,
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   department?: StringNullableFilter | String | Null,
+         ?   hallId?: StringNullableFilter | String | Null,
+         ?   allocation?: AllocationNullableRelationFilter | allocationWhereInput | Null,
+         ?   hall?: HallNullableRelationFilter | hallWhereInput | Null,
+         ?   roomRequest?: RoomRequestNullableRelationFilter | roomRequestWhereInput | Null
+           },
+           data: {
+             fullName: "Clement Obeng"
+           }
+         })
+
+Argument `where` of type studentWhereUniqueInput needs at least one of `studentId` or `telephone` arguments. Available options are marked with ?.
+2024-07-03T23:46:13.257Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.update()` invocation in
+/home/sam/Documents/hallApp/dist/src/helpers/student.js:37:56
+
+  34 });
+  35 exports.getStudentById = getStudentById;
+  36 const updateStudent = (studentId, data) => __awaiter(void 0, void 0, void 0, function* () {
+→ 37     const student = yield prismaUtil_1.default.student.update({
+           where: {
+             studentId: undefined,
+         ?   telephone?: String,
+         ?   AND?: studentWhereInput | studentWhereInput[],
+         ?   OR?: studentWhereInput[],
+         ?   NOT?: studentWhereInput | studentWhereInput[],
+         ?   profile?: StringFilter | String,
+         ?   fullName?: StringFilter | String,
+         ?   email?: StringNullableFilter | String | Null,
+         ?   password?: StringFilter | String,
+         ?   gender?: StringFilter | String,
+         ?   level?: IntFilter | Int,
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   department?: StringNullableFilter | String | Null,
+         ?   hallId?: StringNullableFilter | String | Null,
+         ?   allocation?: AllocationNullableRelationFilter | allocationWhereInput | Null,
+         ?   hall?: HallNullableRelationFilter | hallWhereInput | Null,
+         ?   roomRequest?: RoomRequestNullableRelationFilter | roomRequestWhereInput | Null
+           },
+           data: {
+             fullName: "Clement Obeng"
+           }
+         })
+
+Argument `where` of type studentWhereUniqueInput needs at least one of `studentId` or `telephone` arguments. Available options are marked with ?.
+2024-07-03T23:47:05.455Z [31merror[39m:	
+Invalid `prismaUtil_1.default.student.update()` invocation in
+/home/sam/Documents/hallApp/dist/src/helpers/student.js:37:56
+
+  34 });
+  35 exports.getStudentById = getStudentById;
+  36 const updateStudent = (studentId, data) => __awaiter(void 0, void 0, void 0, function* () {
+→ 37     const student = yield prismaUtil_1.default.student.update({
+           where: {
+             studentId: undefined,
+         ?   telephone?: String,
+         ?   AND?: studentWhereInput | studentWhereInput[],
+         ?   OR?: studentWhereInput[],
+         ?   NOT?: studentWhereInput | studentWhereInput[],
+         ?   profile?: StringFilter | String,
+         ?   fullName?: StringFilter | String,
+         ?   email?: StringNullableFilter | String | Null,
+         ?   password?: StringFilter | String,
+         ?   gender?: StringFilter | String,
+         ?   level?: IntFilter | Int,
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   department?: StringNullableFilter | String | Null,
+         ?   hallId?: StringNullableFilter | String | Null,
+         ?   allocation?: AllocationNullableRelationFilter | allocationWhereInput | Null,
+         ?   hall?: HallNullableRelationFilter | hallWhereInput | Null,
+         ?   roomRequest?: RoomRequestNullableRelationFilter | roomRequestWhereInput | Null
+           },
+           data: {
+             fullName: "Clement Obeng"
+           }
+         })
+
+Argument `where` of type studentWhereUniqueInput needs at least one of `studentId` or `telephone` arguments. Available options are marked with ?.
