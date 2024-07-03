@@ -22,11 +22,16 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const room = __importStar(require("../../controllers/roomController"));
+const zodSchema_1 = require("../../utils/zodSchema");
+const validationError_1 = __importDefault(require("../../utils/validationError"));
 const roomRouter = (0, express_1.Router)();
-roomRouter.post("/save", room.addRoom);
+roomRouter.post("/save", (0, validationError_1.default)(zodSchema_1.roomSchema), room.addRoom);
 roomRouter.get("/list", room.listRoom);
 roomRouter.get("/:id", room.getRoomById);
 roomRouter.patch("/:id", room.roomUpdate);

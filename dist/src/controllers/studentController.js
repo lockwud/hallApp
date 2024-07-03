@@ -30,11 +30,9 @@ const argon2_1 = require("../utils/argon2");
 const logger_1 = __importDefault(require("../utils/logger"));
 const cloudinary_1 = require("../utils/cloudinary");
 const student_1 = require("../helpers/student");
-const zodSchema_1 = require("../utils/zodSchema");
 const registerStudent = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const data = req.body;
-        zodSchema_1.studentSchema.parse(req.body);
         data.password = yield (0, argon2_1.hashPassword)(data.password);
         data.level = parseInt(data.level);
         const profile = req.file ? req.file.path : undefined;
@@ -91,6 +89,7 @@ exports.getStudentsById = getStudentsById;
 const updateStudentData = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { studentId } = req.params;
+        console.log("check student id", studentId);
         const data = req.body;
         const student = yield (0, student_1.updateStudent)(studentId, data);
         res.status(httpstatus_1.httpstatus.OK).json({ student });
